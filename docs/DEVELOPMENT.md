@@ -5,10 +5,11 @@ How the code is laid out, how to build and test it, and the developer tools in `
 ## Code map
 
 ```
-app/        MainActivity (Camera / Settings / Diagnostics / Intro), CameraViewModel, Developer (queue),
-            DevelopService, MergeRunner, Settings, SilverpointApp, CameraMath (framing, crop), ui/ (CameraScreen,
-            CameraControls, Dial, Haptics, LookSelector, LookPicture, Overlays, SettingsScreen, IntroScreen,
-            DiagnosticsScreen)
+app/        MainActivity (Camera / Settings / Diagnostics / Intro), CameraViewModel, DiagnosticsViewModel,
+            Developer (queue), DevelopService, MergeRunner, Settings, SilverpointApp, CameraMath (framing, crop),
+            RecipeSwatch, ReportExporter, ui/ (CameraScreen, CameraUi, CameraControls, Dial, Haptics, LookSelector,
+            LookPicture, Overlays, Components, Glyphs, SettingsScreen, IntroScreen, SilverpointMark,
+            DiagnosticsScreen, Theme)
 camera/     Lens (Lens.all), CameraController (Controls, Focus, Flash, prepareFlash, bursts, previewState), PhysicalKeys,
             ExposureMath, probe code (ProbeRunner, ProbeV2, DiagnosticsRun, LensLabel, DngWriter)
 pipeline/   RawMetadata, AndroidRawMetadata, ColorMath (DNG colour, Kelvin WB), ToneCurve, BaseLook,

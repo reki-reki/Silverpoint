@@ -3,7 +3,7 @@
 Everything found while matching Silverpoint's photos to Lightroom exports of the same RAW files (October 2026). It covers the phone's DNG files, how Lightroom treats them, every difference measured, and the patterns that held across all recipes. Use it as a guide when tuning the other recipes.
 
 **TL;DR**
-- **Tone was the main difference, and it was the same in every recipe.** Before the fix, Silverpoint's shadows were too light (about +4 L\*) and its upper midtones too dark (about −4 L\*). One shared correction fixes most of it: `"tone": [0, 0.161, 0.390, 0.616, 0.831, 1]`. Every recipe now carries it (all 26 since 0.9.5).
+- **Tone was the main difference, and it was the same in every recipe.** Before the fix, Silverpoint's shadows were too light (about +4 L\*) and its upper midtones too dark (about −4 L\*). One shared correction fixes most of it: `"tone": [0, 0.161, 0.390, 0.616, 0.831, 1]`. Every recipe carries it (since 0.9.5).
 - **Colour differences depend on the recipe**, but a few were consistent:
   - blues need about 6% more saturation and a few degrees turn towards cyan;
   - pinks and reds need about 7% less saturation;
@@ -182,7 +182,7 @@ CS = California Summer, CC = Reportage, VV = Vivid Slide. Positive hue turns go 
 
 ### Applied to the other recipes
 
-Since 0.9.5, every recipe not yet measured (the 16 colour recipes without their own photo pairs) carries the starting block from section 8: the shared tone plus the colour changes that agreed across all three measured colour recipes. Acros, black and white, has the tone only. Each will be replaced by its own fit once photo pairs exist.
+Since 0.9.5, every recipe not yet measured (the 16 colour recipes without their own photo pairs) carries the starting block from section 8: the shared tone plus the colour changes that agreed across all three measured colour recipes. Mono Yellow Filter, black and white, has the tone only. Each will be replaced by its own fit once photo pairs exist.
 
 ---
 
