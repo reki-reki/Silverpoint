@@ -21,8 +21,7 @@ Silverpoint captures a RAW frame through Android's Camera2 API, develops it on t
 > **Status: beta (0.9.9).**
 > - **Done:** every feature below is built.
 > - **Checked on the phone:** the capability probe, the GPU self-test, the base colour rendering and the camera screen.
-> - **Not yet run end to end:** the full device checklist ([docs/DEVICE_TESTING.md](docs/DEVICE_TESTING.md)).
-> - **Before 1.0:** the device checklist ([docs/RELEASING.md](docs/RELEASING.md)).
+> - **Not yet run end to end:** the full device checklist ([docs/DEVICE_TESTING.md](docs/DEVICE_TESTING.md)); it is the main item left before 1.0 ([docs/RELEASING.md](docs/RELEASING.md)).
 
 ## Why
 

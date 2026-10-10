@@ -22,7 +22,7 @@ object RecipeStore {
                 // The look's spline needs at least two points with strictly increasing inputs.
                 require(curve.size >= 2 && curve.zipWithNext().all { (a, b) -> b[0] > a[0] }) { "$name: $key inputs must increase" }
             }
-            Recipe(name, e.file, e.set, e.group, e.baseSim, e.reference, e.look, e.bestFor, e.params)
+            Recipe(name, e.file, e.set, e.group, e.look, e.bestFor, e.params)
         }
 
     @Serializable
@@ -30,8 +30,6 @@ object RecipeStore {
         val file: String = "",
         val set: String = "",
         val group: String = "",
-        @SerialName("base_sim") val baseSim: String = "",
-        val reference: String = "",
         val look: String = "",
         @SerialName("best_for") val bestFor: String = "",
         val params: RecipeParams = RecipeParams(),

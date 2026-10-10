@@ -451,10 +451,10 @@ fun DialPanel(param: DialParam, ui: CameraUi, act: CameraActions) {
 
 /** Whole stops of ISO and shutter: the labelled, firmer detents. */
 private val WHOLE_ISO = setOf(25, 50, 100, 200, 400, 800, 1600, 3200, 6400)
+private val WHOLE_SHUTTER = setOf("1/8000", "1/4000", "1/2000", "1/1000", "1/500", "1/250", "1/125", "1/60", "1/30", "1/15", "1/8", "1/4", "0.5 s", "1.0 s")
+
 /** White balance stops: 100 K apart from 2500 to 10000 K. */
 private val KELVINS = (2500..10000 step 100).toList()
-
-private val WHOLE_SHUTTER = setOf("1/8000", "1/4000", "1/2000", "1/1000", "1/500", "1/250", "1/125", "1/60", "1/30", "1/15", "1/8", "1/4", "0.5 s", "1.0 s")
 
 /** Blue to amber: what the Kelvin dial does to the photo (higher Kelvin, warmer photo). */
 private val kelvinTrack = listOf(Color(0xFF6FA8FF), Color(0xFFFFFFFF), Color(0xFFFFB45C))
