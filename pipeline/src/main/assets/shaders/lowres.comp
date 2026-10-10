@@ -1,0 +1,55 @@
+#version 310 es
+#extension GL_GOOGLE_include_directive : require
+// One invocation per 4x4 block of the prepared CFA plane: per-channel averages, then colour,
+// exposure, saturation, shoulder and encoding like a full-resolution pixel. Writes encoded luminance
+// (for Clarity/Texture) and linear luminance (for the HDR gain map). Mirrors LocalContrast.lowRes.
+precision highp float;
+precision highp int;
+precision highp image2D;
+
+layout(local_size_x = 16, local_size_y = 16) in;
+
+layout(r32f, binding = 0) readonly uniform image2D uCfa;
+layout(rgba32f, binding = 1) writeonly uniform image2D uLow;
+
+uniform ivec2 uSize;
+uniform ivec2 uLowSize;
+uniform ivec4 uPattern;
+uniform vec3 uRow0;
+uniform vec3 uRow1;
+uniform vec3 uRow2;
+uniform float uExposure;
+uniform float uSaturation;
+uniform float uVibrance;
+uniform float uKnee;
+
+#include "common.glsl"
+
+const int BLOCK = 4;
+
+void main() {
+    ivec2 b = ivec2(gl_GlobalInvocationID.xy);
+    if (b.x >= uLowSize.x || b.y >= uLowSize.y) return;
+    vec3 sum = vec3(0.0);
+    vec3 count = vec3(0.0);
+    for (int dy = 0; dy < BLOCK; dy++) {
+        for (int dx = 0; dx < BLOCK; dx++) {
+            int x = min(b.x * BLOCK + dx, uSize.x - 1);
+            int y = min(b.y * BLOCK + dy, uSize.y - 1);
+            int c = uPattern[(x & 1) + 2 * (y & 1)];
+            float v = imageLoad(uCfa, ivec2(x, y)).r;
+            if (c == 0) { sum.r += v; count.r += 1.0; }
+            else if (c == 1) { sum.g += v; count.g += 1.0; }
+            else { sum.b += v; count.b += 1.0; }
+        }
+    }
+    vec3 cam = vec3(sum.r / count.r, sum.g / count.g, sum.b / count.b);
+    vec3 lin = vec3(
+        uRow0.x * cam.r + uRow0.y * cam.g + uRow0.z * cam.b,
+        uRow1.x * cam.r + uRow1.y * cam.g + uRow1.z * cam.b,
+        uRow2.x * cam.r + uRow2.y * cam.g + uRow2.z * cam.b);
+    vec3 c = linearLook(lin, uExposure, uSaturation, uVibrance);
+    float linear = luma(c);
+    float encoded = luma(shoulderEncode(c, uKnee));
+    imageStore(uLow, b, vec4(encoded, linear, 0.0, 0.0));
+}

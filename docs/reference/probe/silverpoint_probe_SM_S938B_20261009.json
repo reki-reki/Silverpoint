@@ -1,0 +1,824 @@
+{
+  "summary": {
+    "verdict": "GO (baseline): RAW works up to 12.5 MP. 50 and 200 MP are not available to this app.",
+    "attempts": 8,
+    "succeeded": 8,
+    "largestDefaultRawMp": 12.5,
+    "largestDefaultRawTarget": "id 0 4080x3060 (12.5 MP)",
+    "largestMaxResRawMp": null,
+    "largestMaxResRawTarget": null,
+    "physicalCamerasWithRaw": ["0/2", "0/5", "0/6", "0/7"],
+    "physicalCamerasFailed": [],
+    "failures": []
+  },
+  "probe": {
+    "app": "Safelight probe 0.0.1-probe",
+    "timeUtc": "2026-10-09T03:19:08Z"
+  },
+  "device": {
+    "manufacturer": "samsung",
+    "model": "SM-S938B",
+    "device": "pa3q",
+    "soc": "QTI SM8750",
+    "android": "16",
+    "sdkInt": 36,
+    "securityPatch": "2026-08-05",
+    "buildDisplayId": "BP4A.251205.006.S938BXXSCCZH1",
+    "oneUiSemPlatformInt": 170500,
+    "fingerprint": "samsung/pa3qxxx/pa3q:16/BP4A.251205.006/S938BXXSCCZH1_OXMCCZH1:user/release-keys"
+  },
+  "captureTests": [
+    {
+      "target": "id 0 4080x3060 (12.5 MP)",
+      "cameraId": "0",
+      "physicalId": null,
+      "size": "4080x3060",
+      "megapixels": 12.5,
+      "maxResolutionMode": false,
+      "ok": true,
+      "stage": "image",
+      "error": null,
+      "durationMs": 521,
+      "details": {
+        "imageSize": "4080x3060",
+        "imageFormat": 32,
+        "timestampNs": 2510679070611618,
+        "rowStrideBytes": 8160,
+        "pixelStrideBytes": 2,
+        "bufferBytes": 24969600,
+        "sampleMin": 63,
+        "sampleMax": 774,
+        "sampleMean": 155.3,
+        "result": {
+          "iso": 248,
+          "exposureTimeNs": 9991324,
+          "focalLengthMm": 6.300000190734863,
+          "aperture": 1.7000000476837158,
+          "activePhysicalId": "5",
+          "hasNoiseProfile": true,
+          "hasLensShadingMap": true,
+          "hasDynamicBlackLevel": true,
+          "hasNeutralColorPoint": true,
+          "noiseReductionMode": 0,
+          "edgeMode": 0
+        }
+      }
+    },
+    {
+      "target": "id 2 4080x3060 (12.5 MP)",
+      "cameraId": "2",
+      "physicalId": null,
+      "size": "4080x3060",
+      "megapixels": 12.5,
+      "maxResolutionMode": false,
+      "ok": true,
+      "stage": "image",
+      "error": null,
+      "durationMs": 328,
+      "details": {
+        "imageSize": "4080x3060",
+        "imageFormat": 32,
+        "timestampNs": 2510679928946505,
+        "rowStrideBytes": 8160,
+        "pixelStrideBytes": 2,
+        "bufferBytes": 24969600,
+        "sampleMin": 61,
+        "sampleMax": 1023,
+        "sampleMean": 136.3,
+        "result": {
+          "iso": 235,
+          "exposureTimeNs": 9991324,
+          "focalLengthMm": 2.200000047683716,
+          "aperture": 1.899999976158142,
+          "activePhysicalId": null,
+          "hasNoiseProfile": true,
+          "hasLensShadingMap": true,
+          "hasDynamicBlackLevel": true,
+          "hasNeutralColorPoint": true,
+          "noiseReductionMode": 0,
+          "edgeMode": 0
+        }
+      }
+    },
+    {
+      "target": "id 1 4000x3000 (12.0 MP)",
+      "cameraId": "1",
+      "physicalId": null,
+      "size": "4000x3000",
+      "megapixels": 12,
+      "maxResolutionMode": false,
+      "ok": true,
+      "stage": "image",
+      "error": null,
+      "durationMs": 432,
+      "details": {
+        "imageSize": "4000x3000",
+        "imageFormat": 32,
+        "timestampNs": 2510680676862753,
+        "rowStrideBytes": 8000,
+        "pixelStrideBytes": 2,
+        "bufferBytes": 24000000,
+        "sampleMin": 62,
+        "sampleMax": 480,
+        "sampleMean": 137.1,
+        "result": {
+          "iso": 44,
+          "exposureTimeNs": 29994234,
+          "focalLengthMm": 3.299999952316284,
+          "aperture": 2.200000047683716,
+          "activePhysicalId": null,
+          "hasNoiseProfile": true,
+          "hasLensShadingMap": true,
+          "hasDynamicBlackLevel": true,
+          "hasNeutralColorPoint": true,
+          "noiseReductionMode": 0,
+          "edgeMode": 0
+        }
+      }
+    },
+    {
+      "target": "id 3 3392x2544 (8.6 MP)",
+      "cameraId": "3",
+      "physicalId": null,
+      "size": "3392x2544",
+      "megapixels": 8.6,
+      "maxResolutionMode": false,
+      "ok": true,
+      "stage": "image",
+      "error": null,
+      "durationMs": 462,
+      "details": {
+        "imageSize": "3392x2544",
+        "imageFormat": 32,
+        "timestampNs": 2510681535492544,
+        "rowStrideBytes": 6784,
+        "pixelStrideBytes": 2,
+        "bufferBytes": 17258496,
+        "sampleMin": 62,
+        "sampleMax": 519,
+        "sampleMean": 132.7,
+        "result": {
+          "iso": 47,
+          "exposureTimeNs": 29994234,
+          "focalLengthMm": 3.299999952316284,
+          "aperture": 2.200000047683716,
+          "activePhysicalId": null,
+          "hasNoiseProfile": true,
+          "hasLensShadingMap": true,
+          "hasDynamicBlackLevel": true,
+          "hasNeutralColorPoint": true,
+          "noiseReductionMode": 0,
+          "edgeMode": 0
+        }
+      }
+    },
+    {
+      "target": "id 0 / physical 2 4080x3060 (12.5 MP)",
+      "cameraId": "0",
+      "physicalId": "2",
+      "size": "4080x3060",
+      "megapixels": 12.5,
+      "maxResolutionMode": false,
+      "ok": true,
+      "stage": "image",
+      "error": null,
+      "durationMs": 375,
+      "details": {
+        "imageSize": "4080x3060",
+        "imageFormat": 32,
+        "timestampNs": 2510682359358275,
+        "rowStrideBytes": 8160,
+        "pixelStrideBytes": 2,
+        "bufferBytes": 24969600,
+        "sampleMin": 62,
+        "sampleMax": 1023,
+        "sampleMean": 137.3,
+        "result": {
+          "iso": 234,
+          "exposureTimeNs": 9991324,
+          "focalLengthMm": 2.200000047683716,
+          "aperture": 1.899999976158142,
+          "activePhysicalId": "2",
+          "hasNoiseProfile": true,
+          "hasLensShadingMap": true,
+          "hasDynamicBlackLevel": true,
+          "hasNeutralColorPoint": true,
+          "noiseReductionMode": 0,
+          "edgeMode": 0
+        }
+      }
+    },
+    {
+      "target": "id 0 / physical 5 4080x3060 (12.5 MP)",
+      "cameraId": "0",
+      "physicalId": "5",
+      "size": "4080x3060",
+      "megapixels": 12.5,
+      "maxResolutionMode": false,
+      "ok": true,
+      "stage": "image",
+      "error": null,
+      "durationMs": 384,
+      "details": {
+        "imageSize": "4080x3060",
+        "imageFormat": 32,
+        "timestampNs": 2510683105208285,
+        "rowStrideBytes": 8160,
+        "pixelStrideBytes": 2,
+        "bufferBytes": 24969600,
+        "sampleMin": 64,
+        "sampleMax": 1023,
+        "sampleMean": 152.6,
+        "result": {
+          "iso": 214,
+          "exposureTimeNs": 9991324,
+          "focalLengthMm": 6.300000190734863,
+          "aperture": 1.7000000476837158,
+          "activePhysicalId": "5",
+          "hasNoiseProfile": true,
+          "hasLensShadingMap": true,
+          "hasDynamicBlackLevel": true,
+          "hasNeutralColorPoint": true,
+          "noiseReductionMode": 0,
+          "edgeMode": 0
+        }
+      }
+    },
+    {
+      "target": "id 0 / physical 6 4000x3000 (12.0 MP)",
+      "cameraId": "0",
+      "physicalId": "6",
+      "size": "4000x3000",
+      "megapixels": 12,
+      "maxResolutionMode": false,
+      "ok": true,
+      "stage": "image",
+      "error": null,
+      "durationMs": 350,
+      "details": {
+        "imageSize": "4000x3000",
+        "imageFormat": 32,
+        "timestampNs": 2510683833948262,
+        "rowStrideBytes": 8000,
+        "pixelStrideBytes": 2,
+        "bufferBytes": 24000000,
+        "sampleMin": 65,
+        "sampleMax": 693,
+        "sampleMean": 226,
+        "result": {
+          "iso": 432,
+          "exposureTimeNs": 9991324,
+          "focalLengthMm": 7.900000095367432,
+          "aperture": 2.4000000953674316,
+          "activePhysicalId": "6",
+          "hasNoiseProfile": true,
+          "hasLensShadingMap": true,
+          "hasDynamicBlackLevel": true,
+          "hasNeutralColorPoint": true,
+          "noiseReductionMode": 0,
+          "edgeMode": 0
+        }
+      }
+    },
+    {
+      "target": "id 0 / physical 7 4080x3060 (12.5 MP)",
+      "cameraId": "0",
+      "physicalId": "7",
+      "size": "4080x3060",
+      "megapixels": 12.5,
+      "maxResolutionMode": false,
+      "ok": true,
+      "stage": "image",
+      "error": null,
+      "durationMs": 366,
+      "details": {
+        "imageSize": "4080x3060",
+        "imageFormat": 32,
+        "timestampNs": 2510684566857020,
+        "rowStrideBytes": 8160,
+        "pixelStrideBytes": 2,
+        "bufferBytes": 24969600,
+        "sampleMin": 63,
+        "sampleMax": 655,
+        "sampleMean": 229.3,
+        "result": {
+          "iso": 407,
+          "exposureTimeNs": 19982648,
+          "focalLengthMm": 18.600000381469727,
+          "aperture": 3.4000000953674316,
+          "activePhysicalId": "7",
+          "hasNoiseProfile": true,
+          "hasLensShadingMap": true,
+          "hasDynamicBlackLevel": true,
+          "hasNeutralColorPoint": true,
+          "noiseReductionMode": 0,
+          "edgeMode": 0
+        }
+      }
+    }
+  ],
+  "cameras": [
+    {
+      "id": "0",
+      "facing": "back",
+      "hardwareLevel": "LEVEL_3",
+      "capabilities": ["BACKWARD_COMPATIBLE", "CONSTRAINED_HIGH_SPEED_VIDEO", "RAW", "YUV_REPROCESSING", "PRIVATE_REPROCESSING", "READ_SENSOR_SETTINGS", "MANUAL_SENSOR", "BURST_CAPTURE", "MANUAL_POST_PROCESSING", "STREAM_USE_CASE", "DYNAMIC_RANGE_TEN_BIT", "COLOR_SPACE_PROFILES", "LOGICAL_MULTI_CAMERA"],
+      "hasRaw": true,
+      "hasManualSensor": true,
+      "hasUltraHighResolutionSensor": false,
+      "hasRemosaicReprocessing": false,
+      "supportsSensorPixelModeKey": false,
+      "physicalCameraIds": ["2", "5", "6", "7"],
+      "sensorOrientation": 90,
+      "sensor": {
+        "pixelArray": "4080x3060",
+        "activeArray": "0,0 4080x3060",
+        "preCorrectionActiveArray": "0,0 4080x3060",
+        "pixelArrayMaxRes": null,
+        "activeArrayMaxRes": null,
+        "physicalSizeMm": "9.792 x 7.344",
+        "colorFilterArrangement": "GBRG",
+        "whiteLevel": 1023,
+        "blackLevelPattern": [64, 64, 64, 64],
+        "isoRange": "12 - 3200",
+        "exposureTimeRangeNs": "83490 - 176037266",
+        "maxFrameDurationNs": 255142810,
+        "hasColorTransform1": true,
+        "hasForwardMatrix1": true,
+        "referenceIlluminant1": 21
+      },
+      "lens": {
+        "focalLengthsMm": [6.300000190734863],
+        "apertures": [1.7000000476837158],
+        "minFocusDistanceDiopters": 10,
+        "hyperfocalDiopters": 0.20559336245059967,
+        "opticalStabilizationModes": [0],
+        "zoomRatioRange": "0.6 - 10.0"
+      },
+      "exposureControl": {
+        "aeCompensationRange": "-20 - 20",
+        "aeCompensationStep": "1/10",
+        "aeAvailableModes": [0, 1, 2, 3],
+        "noiseReductionModes": [0, 1, 2, 3, 4],
+        "edgeModes": [1, 2, 0, 3],
+        "lensShadingMapModes": [0, 1],
+        "aePriorityModes": [0],
+        "colorTemperatureRange": null
+      },
+      "streams": {
+        "defaultMode": {
+          "RAW_SENSOR": ["4080x3060 (12.5 MP)"],
+          "RAW10": ["4080x3060 (12.5 MP)"],
+          "RAW12": [],
+          "JPEG_largest3": ["4080x3060 (12.5 MP)", "4032x3024 (12.2 MP)", "4000x3000 (12.0 MP)"],
+          "YUV_420_888_largest3": ["4080x3060 (12.5 MP)", "4032x3024 (12.2 MP)", "4000x3000 (12.0 MP)"]
+        },
+        "maxResolutionMode": "not exposed"
+      }
+    },
+    {
+      "id": "1",
+      "facing": "front",
+      "hardwareLevel": "FULL",
+      "capabilities": ["BACKWARD_COMPATIBLE", "CONSTRAINED_HIGH_SPEED_VIDEO", "RAW", "MANUAL_SENSOR", "MANUAL_POST_PROCESSING", "PRIVATE_REPROCESSING", "READ_SENSOR_SETTINGS", "BURST_CAPTURE", "DYNAMIC_RANGE_TEN_BIT", "STREAM_USE_CASE", "COLOR_SPACE_PROFILES"],
+      "hasRaw": true,
+      "hasManualSensor": true,
+      "hasUltraHighResolutionSensor": false,
+      "hasRemosaicReprocessing": false,
+      "supportsSensorPixelModeKey": false,
+      "physicalCameraIds": [],
+      "sensorOrientation": 270,
+      "sensor": {
+        "pixelArray": "4000x3000",
+        "activeArray": "0,0 4000x3000",
+        "preCorrectionActiveArray": "0,0 4000x3000",
+        "pixelArrayMaxRes": null,
+        "activeArrayMaxRes": null,
+        "physicalSizeMm": "4.48 x 3.36",
+        "colorFilterArrangement": "GRBG",
+        "whiteLevel": 1023,
+        "blackLevelPattern": [64, 64, 64, 64],
+        "isoRange": "25 - 3200",
+        "exposureTimeRangeNs": "72848 - 417188152",
+        "maxFrameDurationNs": 417302879,
+        "hasColorTransform1": true,
+        "hasForwardMatrix1": true,
+        "referenceIlluminant1": 21
+      },
+      "lens": {
+        "focalLengthsMm": [3.299999952316284],
+        "apertures": [2.200000047683716],
+        "minFocusDistanceDiopters": 5,
+        "hyperfocalDiopters": 0.4525252878665924,
+        "opticalStabilizationModes": [0],
+        "zoomRatioRange": "1.0 - 8.0"
+      },
+      "exposureControl": {
+        "aeCompensationRange": "-20 - 20",
+        "aeCompensationStep": "1/10",
+        "aeAvailableModes": [0, 1],
+        "noiseReductionModes": [0, 1, 2, 3, 4],
+        "edgeModes": [1, 2, 0, 3],
+        "lensShadingMapModes": [0, 1],
+        "aePriorityModes": [0],
+        "colorTemperatureRange": null
+      },
+      "streams": {
+        "defaultMode": {
+          "RAW_SENSOR": ["4000x3000 (12.0 MP)"],
+          "RAW10": ["4000x3000 (12.0 MP)"],
+          "RAW12": [],
+          "JPEG_largest3": ["4000x3000 (12.0 MP)", "3648x2736 (10.0 MP)", "4000x2252 (9.0 MP)"],
+          "YUV_420_888_largest3": ["4000x3000 (12.0 MP)", "3648x2736 (10.0 MP)", "4000x2252 (9.0 MP)"]
+        },
+        "maxResolutionMode": "not exposed"
+      }
+    },
+    {
+      "id": "2",
+      "facing": "back",
+      "hardwareLevel": "LIMITED",
+      "capabilities": ["BACKWARD_COMPATIBLE", "RAW", "CONSTRAINED_HIGH_SPEED_VIDEO", "MANUAL_POST_PROCESSING", "PRIVATE_REPROCESSING", "READ_SENSOR_SETTINGS", "MANUAL_SENSOR", "BURST_CAPTURE", "YUV_REPROCESSING", "DYNAMIC_RANGE_TEN_BIT", "STREAM_USE_CASE", "COLOR_SPACE_PROFILES"],
+      "hasRaw": true,
+      "hasManualSensor": true,
+      "hasUltraHighResolutionSensor": false,
+      "hasRemosaicReprocessing": false,
+      "supportsSensorPixelModeKey": false,
+      "physicalCameraIds": [],
+      "sensorOrientation": 90,
+      "sensor": {
+        "pixelArray": "4080x3060",
+        "activeArray": "0,0 4080x3060",
+        "preCorrectionActiveArray": "0,0 4080x3060",
+        "pixelArrayMaxRes": "4080x3060",
+        "activeArrayMaxRes": "0,0 4080x3060",
+        "physicalSizeMm": "5.712 x 4.284",
+        "colorFilterArrangement": "GRBG",
+        "whiteLevel": 1023,
+        "blackLevelPattern": [64, 64, 64, 64],
+        "isoRange": "19 - 3200",
+        "exposureTimeRangeNs": "83490 - 176037266",
+        "maxFrameDurationNs": 176102264,
+        "hasColorTransform1": true,
+        "hasForwardMatrix1": true,
+        "referenceIlluminant1": 21
+      },
+      "lens": {
+        "focalLengthsMm": [2.200000047683716],
+        "apertures": [1.899999976158142],
+        "minFocusDistanceDiopters": 20,
+        "hyperfocalDiopters": 1.0991734266281128,
+        "opticalStabilizationModes": [0],
+        "zoomRatioRange": "1.0 - 8.0"
+      },
+      "exposureControl": {
+        "aeCompensationRange": "-20 - 20",
+        "aeCompensationStep": "1/10",
+        "aeAvailableModes": [0, 1, 2, 3],
+        "noiseReductionModes": [0, 1, 2, 3, 4],
+        "edgeModes": [1, 2, 0, 3],
+        "lensShadingMapModes": [0, 1],
+        "aePriorityModes": [0],
+        "colorTemperatureRange": null
+      },
+      "streams": {
+        "defaultMode": {
+          "RAW_SENSOR": ["4080x3060 (12.5 MP)"],
+          "RAW10": ["4080x3060 (12.5 MP)"],
+          "RAW12": [],
+          "JPEG_largest3": ["4080x3060 (12.5 MP)", "3648x2736 (10.0 MP)", "4000x2252 (9.0 MP)"],
+          "YUV_420_888_largest3": ["4080x3060 (12.5 MP)", "3648x2736 (10.0 MP)", "4000x2252 (9.0 MP)"]
+        },
+        "maxResolutionMode": {
+          "RAW_SENSOR": [],
+          "RAW10": [],
+          "RAW12": [],
+          "JPEG_largest3": ["1920x1080 (2.1 MP)"],
+          "YUV_420_888_largest3": ["1920x1080 (2.1 MP)"]
+        }
+      }
+    },
+    {
+      "id": "3",
+      "facing": "front",
+      "hardwareLevel": "FULL",
+      "capabilities": ["BACKWARD_COMPATIBLE", "CONSTRAINED_HIGH_SPEED_VIDEO", "RAW", "MANUAL_SENSOR", "MANUAL_POST_PROCESSING", "PRIVATE_REPROCESSING", "READ_SENSOR_SETTINGS", "BURST_CAPTURE", "DYNAMIC_RANGE_TEN_BIT", "STREAM_USE_CASE", "COLOR_SPACE_PROFILES"],
+      "hasRaw": true,
+      "hasManualSensor": true,
+      "hasUltraHighResolutionSensor": false,
+      "hasRemosaicReprocessing": false,
+      "supportsSensorPixelModeKey": false,
+      "physicalCameraIds": [],
+      "sensorOrientation": 270,
+      "sensor": {
+        "pixelArray": "3392x2544",
+        "activeArray": "0,0 3392x2544",
+        "preCorrectionActiveArray": "0,0 3392x2544",
+        "pixelArrayMaxRes": null,
+        "activeArrayMaxRes": null,
+        "physicalSizeMm": "3.79904 x 2.84928",
+        "colorFilterArrangement": "GRBG",
+        "whiteLevel": 1023,
+        "blackLevelPattern": [64, 64, 64, 64],
+        "isoRange": "25 - 3200",
+        "exposureTimeRangeNs": "49030 - 338965373",
+        "maxFrameDurationNs": 339080100,
+        "hasColorTransform1": true,
+        "hasForwardMatrix1": true,
+        "referenceIlluminant1": 21
+      },
+      "lens": {
+        "focalLengthsMm": [3.299999952316284],
+        "apertures": [2.200000047683716],
+        "minFocusDistanceDiopters": 5,
+        "hyperfocalDiopters": 0.4525252878665924,
+        "opticalStabilizationModes": [0],
+        "zoomRatioRange": "1.0 - 8.0"
+      },
+      "exposureControl": {
+        "aeCompensationRange": "-20 - 20",
+        "aeCompensationStep": "1/10",
+        "aeAvailableModes": [0, 1],
+        "noiseReductionModes": [0, 1, 2, 3, 4],
+        "edgeModes": [1, 2, 0, 3],
+        "lensShadingMapModes": [0, 1],
+        "aePriorityModes": [0],
+        "colorTemperatureRange": null
+      },
+      "streams": {
+        "defaultMode": {
+          "RAW_SENSOR": ["3392x2544 (8.6 MP)"],
+          "RAW10": ["3392x2544 (8.6 MP)"],
+          "RAW12": [],
+          "JPEG_largest3": ["3392x2544 (8.6 MP)", "3392x1908 (6.5 MP)", "2208x2208 (4.9 MP)"],
+          "YUV_420_888_largest3": ["3392x2544 (8.6 MP)", "3392x1908 (6.5 MP)", "2208x2208 (4.9 MP)"]
+        },
+        "maxResolutionMode": "not exposed"
+      }
+    }
+  ],
+  "physicalCameras": [
+    {
+      "route": "0/2",
+      "characteristics": {
+        "id": "2",
+        "facing": "back",
+        "hardwareLevel": "LIMITED",
+        "capabilities": ["BACKWARD_COMPATIBLE", "RAW", "CONSTRAINED_HIGH_SPEED_VIDEO", "MANUAL_POST_PROCESSING", "PRIVATE_REPROCESSING", "READ_SENSOR_SETTINGS", "MANUAL_SENSOR", "BURST_CAPTURE", "YUV_REPROCESSING", "DYNAMIC_RANGE_TEN_BIT", "STREAM_USE_CASE", "COLOR_SPACE_PROFILES"],
+        "hasRaw": true,
+        "hasManualSensor": true,
+        "hasUltraHighResolutionSensor": false,
+        "hasRemosaicReprocessing": false,
+        "supportsSensorPixelModeKey": false,
+        "physicalCameraIds": [],
+        "sensorOrientation": 90,
+        "sensor": {
+          "pixelArray": "4080x3060",
+          "activeArray": "0,0 4080x3060",
+          "preCorrectionActiveArray": "0,0 4080x3060",
+          "pixelArrayMaxRes": "4080x3060",
+          "activeArrayMaxRes": "0,0 4080x3060",
+          "physicalSizeMm": "5.712 x 4.284",
+          "colorFilterArrangement": "GRBG",
+          "whiteLevel": 1023,
+          "blackLevelPattern": [64, 64, 64, 64],
+          "isoRange": "19 - 3200",
+          "exposureTimeRangeNs": "83490 - 176037266",
+          "maxFrameDurationNs": 176102264,
+          "hasColorTransform1": true,
+          "hasForwardMatrix1": true,
+          "referenceIlluminant1": 21
+        },
+        "lens": {
+          "focalLengthsMm": [2.200000047683716],
+          "apertures": [1.899999976158142],
+          "minFocusDistanceDiopters": 20,
+          "hyperfocalDiopters": 1.0991734266281128,
+          "opticalStabilizationModes": [0],
+          "zoomRatioRange": "1.0 - 8.0"
+        },
+        "exposureControl": {
+          "aeCompensationRange": "-20 - 20",
+          "aeCompensationStep": "1/10",
+          "aeAvailableModes": [0, 1, 2, 3],
+          "noiseReductionModes": [0, 1, 2, 3, 4],
+          "edgeModes": [1, 2, 0, 3],
+          "lensShadingMapModes": [0, 1],
+          "aePriorityModes": [0],
+          "colorTemperatureRange": null
+        },
+        "streams": {
+          "defaultMode": {
+            "RAW_SENSOR": ["4080x3060 (12.5 MP)"],
+            "RAW10": ["4080x3060 (12.5 MP)"],
+            "RAW12": [],
+            "JPEG_largest3": ["4080x3060 (12.5 MP)", "3648x2736 (10.0 MP)", "4000x2252 (9.0 MP)"],
+            "YUV_420_888_largest3": ["4080x3060 (12.5 MP)", "3648x2736 (10.0 MP)", "4000x2252 (9.0 MP)"]
+          },
+          "maxResolutionMode": {
+            "RAW_SENSOR": [],
+            "RAW10": [],
+            "RAW12": [],
+            "JPEG_largest3": ["1920x1080 (2.1 MP)"],
+            "YUV_420_888_largest3": ["1920x1080 (2.1 MP)"]
+          }
+        }
+      }
+    },
+    {
+      "route": "0/5",
+      "characteristics": {
+        "id": "5",
+        "facing": "back",
+        "hardwareLevel": "LEVEL_3",
+        "capabilities": ["BACKWARD_COMPATIBLE", "CONSTRAINED_HIGH_SPEED_VIDEO", "RAW", "YUV_REPROCESSING", "PRIVATE_REPROCESSING", "READ_SENSOR_SETTINGS", "MANUAL_SENSOR", "BURST_CAPTURE", "MANUAL_POST_PROCESSING", "STREAM_USE_CASE", "DYNAMIC_RANGE_TEN_BIT", "COLOR_SPACE_PROFILES"],
+        "hasRaw": true,
+        "hasManualSensor": true,
+        "hasUltraHighResolutionSensor": false,
+        "hasRemosaicReprocessing": false,
+        "supportsSensorPixelModeKey": false,
+        "physicalCameraIds": [],
+        "sensorOrientation": 90,
+        "sensor": {
+          "pixelArray": "4080x3060",
+          "activeArray": "0,0 4080x3060",
+          "preCorrectionActiveArray": "0,0 4080x3060",
+          "pixelArrayMaxRes": "4080x3060",
+          "activeArrayMaxRes": "0,0 4080x3060",
+          "physicalSizeMm": "9.792 x 7.344",
+          "colorFilterArrangement": "GBRG",
+          "whiteLevel": 1023,
+          "blackLevelPattern": [64, 64, 64, 64],
+          "isoRange": "12 - 3200",
+          "exposureTimeRangeNs": "43219 - 255098784",
+          "maxFrameDurationNs": 255142810,
+          "hasColorTransform1": true,
+          "hasForwardMatrix1": true,
+          "referenceIlluminant1": 21
+        },
+        "lens": {
+          "focalLengthsMm": [6.300000190734863],
+          "apertures": [1.7000000476837158],
+          "minFocusDistanceDiopters": 10,
+          "hyperfocalDiopters": 0.20559336245059967,
+          "opticalStabilizationModes": [0, 1],
+          "zoomRatioRange": "1.0 - 8.0"
+        },
+        "exposureControl": {
+          "aeCompensationRange": "-20 - 20",
+          "aeCompensationStep": "1/10",
+          "aeAvailableModes": [0, 1, 2, 3],
+          "noiseReductionModes": [0, 1, 2, 3, 4],
+          "edgeModes": [1, 2, 0, 3],
+          "lensShadingMapModes": [0, 1],
+          "aePriorityModes": null,
+          "colorTemperatureRange": null
+        },
+        "streams": {
+          "defaultMode": {
+            "RAW_SENSOR": ["4080x3060 (12.5 MP)"],
+            "RAW10": ["4080x3060 (12.5 MP)"],
+            "RAW12": [],
+            "JPEG_largest3": ["4080x3060 (12.5 MP)", "4080x3060 (12.5 MP)", "4000x3000 (12.0 MP)"],
+            "YUV_420_888_largest3": ["4080x3060 (12.5 MP)", "4080x3060 (12.5 MP)", "4000x3000 (12.0 MP)"]
+          },
+          "maxResolutionMode": {
+            "RAW_SENSOR": [],
+            "RAW10": [],
+            "RAW12": [],
+            "JPEG_largest3": [],
+            "YUV_420_888_largest3": []
+          }
+        }
+      }
+    },
+    {
+      "route": "0/6",
+      "characteristics": {
+        "id": "6",
+        "facing": "back",
+        "hardwareLevel": "LIMITED",
+        "capabilities": ["BACKWARD_COMPATIBLE", "CONSTRAINED_HIGH_SPEED_VIDEO", "RAW", "MANUAL_SENSOR", "MANUAL_POST_PROCESSING", "PRIVATE_REPROCESSING", "READ_SENSOR_SETTINGS", "BURST_CAPTURE", "DYNAMIC_RANGE_TEN_BIT", "STREAM_USE_CASE", "COLOR_SPACE_PROFILES"],
+        "hasRaw": true,
+        "hasManualSensor": true,
+        "hasUltraHighResolutionSensor": false,
+        "hasRemosaicReprocessing": false,
+        "supportsSensorPixelModeKey": false,
+        "physicalCameraIds": [],
+        "sensorOrientation": 90,
+        "sensor": {
+          "pixelArray": "4000x3000",
+          "activeArray": "0,0 4000x3000",
+          "preCorrectionActiveArray": "0,0 4000x3000",
+          "pixelArrayMaxRes": null,
+          "activeArrayMaxRes": null,
+          "physicalSizeMm": "4.48 x 3.36",
+          "colorFilterArrangement": "GRBG",
+          "whiteLevel": 1023,
+          "blackLevelPattern": [64, 64, 64, 64],
+          "isoRange": "50 - 3200",
+          "exposureTimeRangeNs": "53850 - 350026925",
+          "maxFrameDurationNs": 350113086,
+          "hasColorTransform1": true,
+          "hasForwardMatrix1": true,
+          "referenceIlluminant1": 21
+        },
+        "lens": {
+          "focalLengthsMm": [7.900000095367432],
+          "apertures": [2.4000000953674316],
+          "minFocusDistanceDiopters": 2.5,
+          "hyperfocalDiopters": 0.08614005148410797,
+          "opticalStabilizationModes": [0, 1],
+          "zoomRatioRange": "1.0 - 8.0"
+        },
+        "exposureControl": {
+          "aeCompensationRange": "-20 - 20",
+          "aeCompensationStep": "1/10",
+          "aeAvailableModes": [0, 1, 2, 3],
+          "noiseReductionModes": [0, 1, 2, 3, 4],
+          "edgeModes": [1, 2, 0, 3],
+          "lensShadingMapModes": [0, 1],
+          "aePriorityModes": null,
+          "colorTemperatureRange": null
+        },
+        "streams": {
+          "defaultMode": {
+            "RAW_SENSOR": ["4000x3000 (12.0 MP)"],
+            "RAW10": ["4000x3000 (12.0 MP)"],
+            "RAW12": [],
+            "JPEG_largest3": ["4000x3000 (12.0 MP)", "3648x2736 (10.0 MP)", "4000x2252 (9.0 MP)"],
+            "YUV_420_888_largest3": ["4000x3000 (12.0 MP)", "3648x2736 (10.0 MP)", "4000x2252 (9.0 MP)"]
+          },
+          "maxResolutionMode": "not exposed"
+        }
+      }
+    },
+    {
+      "route": "0/7",
+      "characteristics": {
+        "id": "7",
+        "facing": "back",
+        "hardwareLevel": "LIMITED",
+        "capabilities": ["BACKWARD_COMPATIBLE", "CONSTRAINED_HIGH_SPEED_VIDEO", "RAW", "MANUAL_SENSOR", "MANUAL_POST_PROCESSING", "PRIVATE_REPROCESSING", "READ_SENSOR_SETTINGS", "BURST_CAPTURE", "DYNAMIC_RANGE_TEN_BIT", "STREAM_USE_CASE", "COLOR_SPACE_PROFILES"],
+        "hasRaw": true,
+        "hasManualSensor": true,
+        "hasUltraHighResolutionSensor": false,
+        "hasRemosaicReprocessing": false,
+        "supportsSensorPixelModeKey": false,
+        "physicalCameraIds": [],
+        "sensorOrientation": 90,
+        "sensor": {
+          "pixelArray": "4080x3060",
+          "activeArray": "0,0 4080x3060",
+          "preCorrectionActiveArray": "0,0 4080x3060",
+          "pixelArrayMaxRes": "4080x3060",
+          "activeArrayMaxRes": "0,0 4080x3060",
+          "physicalSizeMm": "5.712 x 4.284",
+          "colorFilterArrangement": "GRBG",
+          "whiteLevel": 1023,
+          "blackLevelPattern": [64, 64, 64, 64],
+          "isoRange": "28 - 3200",
+          "exposureTimeRangeNs": "48309 - 273984151",
+          "maxFrameDurationNs": 274127466,
+          "hasColorTransform1": true,
+          "hasForwardMatrix1": true,
+          "referenceIlluminant1": 21
+        },
+        "lens": {
+          "focalLengthsMm": [18.600000381469727],
+          "apertures": [3.4000000953674316],
+          "minFocusDistanceDiopters": 1.25,
+          "hyperfocalDiopters": 0.02751763164997101,
+          "opticalStabilizationModes": [0, 1],
+          "zoomRatioRange": "1.0 - 8.0"
+        },
+        "exposureControl": {
+          "aeCompensationRange": "-20 - 20",
+          "aeCompensationStep": "1/10",
+          "aeAvailableModes": [0, 1, 2, 3],
+          "noiseReductionModes": [0, 1, 2, 3, 4],
+          "edgeModes": [1, 2, 0, 3],
+          "lensShadingMapModes": [0, 1],
+          "aePriorityModes": null,
+          "colorTemperatureRange": null
+        },
+        "streams": {
+          "defaultMode": {
+            "RAW_SENSOR": ["4080x3060 (12.5 MP)"],
+            "RAW10": ["4080x3060 (12.5 MP)"],
+            "RAW12": [],
+            "JPEG_largest3": ["4080x3060 (12.5 MP)", "4032x3024 (12.2 MP)", "4000x3000 (12.0 MP)"],
+            "YUV_420_888_largest3": ["4080x3060 (12.5 MP)", "4032x3024 (12.2 MP)", "4000x3000 (12.0 MP)"]
+          },
+          "maxResolutionMode": {
+            "RAW_SENSOR": [],
+            "RAW10": [],
+            "RAW12": [],
+            "JPEG_largest3": ["1920x1080 (2.1 MP)"],
+            "YUV_420_888_largest3": ["1920x1080 (2.1 MP)"]
+          }
+        }
+      }
+    }
+  ]
+}

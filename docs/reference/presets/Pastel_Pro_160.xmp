@@ -1,0 +1,100 @@
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 7.0-c000">
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about=""
+    xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/"
+   crs:PresetType="Normal"
+   crs:Cluster=""
+   crs:UUID="3853064264554629B92753A8B8093A5B"
+   crs:SupportsAmount="True"
+   crs:SupportsColor="True"
+   crs:SupportsMonochrome="True"
+   crs:SupportsHighDynamicRange="True"
+   crs:SupportsNormalDynamicRange="True"
+   crs:SupportsSceneReferred="True"
+   crs:SupportsOutputReferred="True"
+   crs:CameraModelRestriction=""
+   crs:Copyright=""
+   crs:ContactInfo=""
+   crs:Version="15.0"
+   crs:ProcessVersion="11.0"
+   crs:Exposure2012="+0.10"
+   crs:Contrast2012="-10"
+   crs:Highlights2012="-40"
+   crs:Shadows2012="+28"
+   crs:Whites2012="+4"
+   crs:Blacks2012="+8"
+   crs:Texture="-4"
+   crs:Clarity2012="-4"
+   crs:Vibrance="+4"
+   crs:Saturation="-10"
+   crs:SplitToningShadowHue="190"
+   crs:SplitToningShadowSaturation="5"
+   crs:SplitToningHighlightHue="20"
+   crs:SplitToningHighlightSaturation="6"
+   crs:SplitToningBalance="+5"
+   crs:GrainAmount="12"
+   crs:GrainSize="20"
+   crs:GrainFrequency="50"
+   crs:HueAdjustmentRed="+0"
+   crs:SaturationAdjustmentRed="-4"
+   crs:LuminanceAdjustmentRed="+2"
+   crs:HueAdjustmentOrange="-2"
+   crs:SaturationAdjustmentOrange="-8"
+   crs:LuminanceAdjustmentOrange="+10"
+   crs:HueAdjustmentYellow="-4"
+   crs:SaturationAdjustmentYellow="-10"
+   crs:LuminanceAdjustmentYellow="+4"
+   crs:HueAdjustmentGreen="+12"
+   crs:SaturationAdjustmentGreen="-22"
+   crs:LuminanceAdjustmentGreen="+4"
+   crs:HueAdjustmentAqua="+0"
+   crs:SaturationAdjustmentAqua="-8"
+   crs:LuminanceAdjustmentAqua="+4"
+   crs:HueAdjustmentBlue="-4"
+   crs:SaturationAdjustmentBlue="-14"
+   crs:LuminanceAdjustmentBlue="+6"
+   crs:HueAdjustmentPurple="+0"
+   crs:SaturationAdjustmentPurple="-8"
+   crs:LuminanceAdjustmentPurple="+0"
+   crs:HueAdjustmentMagenta="+0"
+   crs:SaturationAdjustmentMagenta="-4"
+   crs:LuminanceAdjustmentMagenta="+0"
+   crs:ToneCurveName2012="Custom"
+   crs:HasSettings="True">
+   <crs:Name>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Pastel Pro 160</rdf:li>
+    </rdf:Alt>
+   </crs:Name>
+   <crs:ShortName>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default"/>
+    </rdf:Alt>
+   </crs:ShortName>
+   <crs:SortName>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default"/>
+    </rdf:Alt>
+   </crs:SortName>
+   <crs:Group>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Silverpoint Recipes</rdf:li>
+    </rdf:Alt>
+   </crs:Group>
+   <crs:Description>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Soft pastel pro negative: gentle contrast, creamy skin, airy highlights, delicate colour.</rdf:li>
+    </rdf:Alt>
+   </crs:Description>
+   <crs:ToneCurvePV2012>
+    <rdf:Seq>
+     <rdf:li>0, 14</rdf:li>
+     <rdf:li>64, 68</rdf:li>
+     <rdf:li>128, 132</rdf:li>
+     <rdf:li>192, 198</rdf:li>
+     <rdf:li>255, 246</rdf:li>
+    </rdf:Seq>
+   </crs:ToneCurvePV2012>
+  </rdf:Description>
+ </rdf:RDF>
+</x:xmpmeta>

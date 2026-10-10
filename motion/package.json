@@ -1,0 +1,16 @@
+{
+  "name": "silverpoint-motion",
+  "private": true,
+  "description": "Silverpoint's start-up animation, made with Remotion. Rendered into app/src/main/res/raw/intro_motion.mp4.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Intro ../app/src/main/res/raw/intro_motion.mp4 --codec=h264 --crf=16 --pixel-format=yuv420p --muted",
+    "still": "remotion still src/index.ts Intro out/last.png --frame=179"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.528",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.528"
+  }
+}

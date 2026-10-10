@@ -1,0 +1,54 @@
+#version 310 es
+// Stage 1, one invocation per CFA sample: black level, white level, lens shading, white balance, clip.
+// Mirrors CpuDeveloper.prepareCfa exactly; keep the two in step.
+precision highp float;
+precision highp int;
+precision highp usampler2D;
+precision highp sampler2D;
+precision highp image2D;
+
+layout(local_size_x = 16, local_size_y = 16) in;
+
+layout(binding = 0) uniform usampler2D uRaw;      // R16UI, width x height
+layout(binding = 1) uniform sampler2D uShading;   // RGBA32F, columns x rows: R, G-even, G-odd, B
+layout(r32f, binding = 0) writeonly uniform image2D uCfa;
+
+uniform ivec2 uSize;
+uniform vec4 uBlack;        // index (x & 1) + 2 * (y & 1)
+uniform float uWhite;
+uniform vec3 uWb;           // R, G, B multipliers
+uniform ivec4 uPattern;     // colour channel per 2x2 position
+uniform int uHasShading;
+uniform ivec2 uShadingSize;
+
+float shadingGain(int x, int y, int ch) {
+    if (uHasShading == 0) return 1.0;
+    int idx = ch == 0 ? 0 : (ch == 2 ? 3 : ((y & 1) == 0 ? 1 : 2));
+    int cols = uShadingSize.x;
+    int rows = uShadingSize.y;
+    float gx = float(x) * float(cols - 1) / float(max(uSize.x - 1, 1));
+    float gy = float(y) * float(rows - 1) / float(max(uSize.y - 1, 1));
+    int x0 = min(int(gx), cols - 2);
+    int y0 = min(int(gy), rows - 2);
+    float fx = gx - float(x0);
+    float fy = gy - float(y0);
+    float g00 = texelFetch(uShading, ivec2(x0, y0), 0)[idx];
+    float g10 = texelFetch(uShading, ivec2(x0 + 1, y0), 0)[idx];
+    float g01 = texelFetch(uShading, ivec2(x0, y0 + 1), 0)[idx];
+    float g11 = texelFetch(uShading, ivec2(x0 + 1, y0 + 1), 0)[idx];
+    float top = g00 + (g10 - g00) * fx;
+    float bottom = g01 + (g11 - g01) * fx;
+    return top + (bottom - top) * fy;
+}
+
+void main() {
+    ivec2 p = ivec2(gl_GlobalInvocationID.xy);
+    if (p.x >= uSize.x || p.y >= uSize.y) return;
+    int idx = (p.x & 1) + 2 * (p.y & 1);
+    float black = uBlack[idx];
+    float v = (float(texelFetch(uRaw, p, 0).r) - black) / (uWhite - black);
+    v = max(v, 0.0);
+    int ch = uPattern[idx];
+    v *= shadingGain(p.x, p.y, ch) * uWb[ch];
+    imageStore(uCfa, p, vec4(min(v, 1.0), 0.0, 0.0, 0.0));
+}

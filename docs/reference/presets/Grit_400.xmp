@@ -1,0 +1,81 @@
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 7.0-c000">
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about=""
+    xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/"
+   crs:PresetType="Normal"
+   crs:Cluster=""
+   crs:UUID="D0CB13D58CB84107ADD9363442D832AC"
+   crs:SupportsAmount="True"
+   crs:SupportsColor="True"
+   crs:SupportsMonochrome="True"
+   crs:SupportsHighDynamicRange="True"
+   crs:SupportsNormalDynamicRange="True"
+   crs:SupportsSceneReferred="True"
+   crs:SupportsOutputReferred="True"
+   crs:CameraModelRestriction=""
+   crs:Copyright=""
+   crs:ContactInfo=""
+   crs:Version="15.0"
+   crs:ProcessVersion="11.0"
+   crs:ConvertToGrayscale="True"
+   crs:Contrast2012="+26"
+   crs:Highlights2012="-18"
+   crs:Shadows2012="+16"
+   crs:Whites2012="+6"
+   crs:Blacks2012="-14"
+   crs:Texture="+8"
+   crs:Clarity2012="+16"
+   crs:Dehaze="+0"
+   crs:Vibrance="+0"
+   crs:Saturation="+0"
+   crs:GrainAmount="58"
+   crs:GrainSize="42"
+   crs:GrainFrequency="45"
+   crs:PostCropVignetteAmount="-8"
+   crs:GrayMixerRed="+8"
+   crs:GrayMixerOrange="+4"
+   crs:GrayMixerYellow="+4"
+   crs:GrayMixerGreen="+0"
+   crs:GrayMixerAqua="-4"
+   crs:GrayMixerBlue="-12"
+   crs:GrayMixerPurple="-4"
+   crs:GrayMixerMagenta="+0"
+   crs:ToneCurveName2012="Custom"
+   crs:HasSettings="True">
+   <crs:Name>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Grit 400</rdf:li>
+    </rdf:Alt>
+   </crs:Name>
+   <crs:ShortName>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default"/>
+    </rdf:Alt>
+   </crs:ShortName>
+   <crs:SortName>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default"/>
+    </rdf:Alt>
+   </crs:SortName>
+   <crs:Group>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Silverpoint Recipes</rdf:li>
+    </rdf:Alt>
+   </crs:Group>
+   <crs:Description>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Gritty classic black and white: strong coarse grain, punchy mid-contrast, open-ish shadows.</rdf:li>
+    </rdf:Alt>
+   </crs:Description>
+   <crs:ToneCurvePV2012>
+    <rdf:Seq>
+     <rdf:li>0, 6</rdf:li>
+     <rdf:li>64, 54</rdf:li>
+     <rdf:li>128, 130</rdf:li>
+     <rdf:li>192, 210</rdf:li>
+     <rdf:li>255, 252</rdf:li>
+    </rdf:Seq>
+   </crs:ToneCurvePV2012>
+  </rdf:Description>
+ </rdf:RDF>
+</x:xmpmeta>

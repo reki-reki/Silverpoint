@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The camera library opens cameras, so it declares the permission it needs. The app requests it at runtime. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+</manifest>

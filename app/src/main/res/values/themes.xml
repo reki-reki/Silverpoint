@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Silverpoint" parent="android:Theme.DeviceDefault.NoActionBar">
+        <!-- Black from the first frame, so there is no white flash before Compose draws. -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <!-- A plain black system splash: the first-launch film starts on black, and the camera opens
+             onto black, so an icon here would only flash and vanish. -->
+        <item name="android:windowSplashScreenBackground">@android:color/black</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_blank</item>
+    </style>
+</resources>

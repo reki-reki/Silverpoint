@@ -1,0 +1,10 @@
+* text=auto
+*.xmp text eol=lf
+*.cube text eol=lf
+*.json text eol=lf
+*.glsl text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.jpg binary
+*.png binary
+*.jar binary

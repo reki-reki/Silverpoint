@@ -1,0 +1,30 @@
+# Gradle / Android
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.keystore
+*.jks
+keystore.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Probe / debug output
+/probe-output/
+*.hprof
+
+# Full-size RAW test files stay out of git (fixtures are cropped)
+*.dng
+__pycache__/
+.kotlin/

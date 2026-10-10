@@ -1,0 +1,22 @@
+name: Device report
+description: Share Silverpoint's Diagnostics results from your phone
+labels: [device-report]
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Phone model, One UI / Android version and build number
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Diagnostics report
+      description: In Silverpoint, Settings → Diagnostics → Run diagnostics, then Share or Save JSON. Paste the text or attach the JSON file.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything unusual?
+      description: For example lenses that failed to open or RAW sizes that were missing.

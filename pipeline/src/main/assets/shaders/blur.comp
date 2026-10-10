@@ -1,0 +1,38 @@
+#version 310 es
+// One pass of a separable Gaussian over a low-resolution luminance image, clamping at the edges.
+// Mirrors LocalContrast.blurPass, including the order of the sum.
+precision highp float;
+precision highp int;
+precision highp sampler2D;
+precision highp image2D;
+
+layout(local_size_x = 16, local_size_y = 16) in;
+
+layout(binding = 0) uniform sampler2D uSrc;       // reads .r
+layout(binding = 1) uniform sampler2D uWeights;   // R32F, (radius + 1) x 1
+layout(r32f, binding = 0) writeonly uniform image2D uDst;
+
+uniform ivec2 uSize;
+uniform int uRadius;
+uniform int uHorizontal;
+
+float src(int x, int y) { return texelFetch(uSrc, ivec2(x, y), 0).r; }
+
+void main() {
+    ivec2 p = ivec2(gl_GlobalInvocationID.xy);
+    if (p.x >= uSize.x || p.y >= uSize.y) return;
+    float acc = src(p.x, p.y) * texelFetch(uWeights, ivec2(0, 0), 0).r;
+    for (int k = 1; k <= uRadius; k++) {
+        float a;
+        float b;
+        if (uHorizontal == 1) {
+            a = src(max(p.x - k, 0), p.y);
+            b = src(min(p.x + k, uSize.x - 1), p.y);
+        } else {
+            a = src(p.x, max(p.y - k, 0));
+            b = src(p.x, min(p.y + k, uSize.y - 1));
+        }
+        acc += (a + b) * texelFetch(uWeights, ivec2(k, 0), 0).r;
+    }
+    imageStore(uDst, p, vec4(acc, 0.0, 0.0, 0.0));
+}

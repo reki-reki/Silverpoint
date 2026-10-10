@@ -1,0 +1,100 @@
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 7.0-c000">
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about=""
+    xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/"
+   crs:PresetType="Normal"
+   crs:Cluster=""
+   crs:UUID="B82BE9C7C1F34EBF9C05D3E7204AE825"
+   crs:SupportsAmount="True"
+   crs:SupportsColor="True"
+   crs:SupportsMonochrome="True"
+   crs:SupportsHighDynamicRange="True"
+   crs:SupportsNormalDynamicRange="True"
+   crs:SupportsSceneReferred="True"
+   crs:SupportsOutputReferred="True"
+   crs:CameraModelRestriction=""
+   crs:Copyright=""
+   crs:ContactInfo=""
+   crs:Version="15.0"
+   crs:ProcessVersion="11.0"
+   crs:Exposure2012="+0.10"
+   crs:Contrast2012="-2"
+   crs:Highlights2012="-35"
+   crs:Shadows2012="+18"
+   crs:Whites2012="+2"
+   crs:Blacks2012="+2"
+   crs:Texture="+0"
+   crs:Clarity2012="+0"
+   crs:Vibrance="+6"
+   crs:Saturation="-4"
+   crs:SplitToningShadowHue="200"
+   crs:SplitToningShadowSaturation="5"
+   crs:SplitToningHighlightHue="38"
+   crs:SplitToningHighlightSaturation="10"
+   crs:SplitToningBalance="+5"
+   crs:GrainAmount="18"
+   crs:GrainSize="22"
+   crs:GrainFrequency="50"
+   crs:HueAdjustmentRed="+0"
+   crs:SaturationAdjustmentRed="+0"
+   crs:LuminanceAdjustmentRed="+2"
+   crs:HueAdjustmentOrange="-4"
+   crs:SaturationAdjustmentOrange="+0"
+   crs:LuminanceAdjustmentOrange="+6"
+   crs:HueAdjustmentYellow="-8"
+   crs:SaturationAdjustmentYellow="-12"
+   crs:LuminanceAdjustmentYellow="+4"
+   crs:HueAdjustmentGreen="+10"
+   crs:SaturationAdjustmentGreen="-16"
+   crs:LuminanceAdjustmentGreen="-4"
+   crs:HueAdjustmentAqua="-6"
+   crs:SaturationAdjustmentAqua="-6"
+   crs:LuminanceAdjustmentAqua="+0"
+   crs:HueAdjustmentBlue="+2"
+   crs:SaturationAdjustmentBlue="-10"
+   crs:LuminanceAdjustmentBlue="+4"
+   crs:HueAdjustmentPurple="+0"
+   crs:SaturationAdjustmentPurple="-6"
+   crs:LuminanceAdjustmentPurple="+0"
+   crs:HueAdjustmentMagenta="+0"
+   crs:SaturationAdjustmentMagenta="-2"
+   crs:LuminanceAdjustmentMagenta="+0"
+   crs:ToneCurveName2012="Custom"
+   crs:HasSettings="True">
+   <crs:Name>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Natural Portrait 400</rdf:li>
+    </rdf:Alt>
+   </crs:Name>
+   <crs:ShortName>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default"/>
+    </rdf:Alt>
+   </crs:ShortName>
+   <crs:SortName>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default"/>
+    </rdf:Alt>
+   </crs:SortName>
+   <crs:Group>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Silverpoint Recipes</rdf:li>
+    </rdf:Alt>
+   </crs:Group>
+   <crs:Description>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Natural and balanced: gentle warmth, pleasing skin, soft contrast, muted greens.</rdf:li>
+    </rdf:Alt>
+   </crs:Description>
+   <crs:ToneCurvePV2012>
+    <rdf:Seq>
+     <rdf:li>0, 8</rdf:li>
+     <rdf:li>64, 60</rdf:li>
+     <rdf:li>128, 130</rdf:li>
+     <rdf:li>192, 198</rdf:li>
+     <rdf:li>255, 250</rdf:li>
+    </rdf:Seq>
+   </crs:ToneCurvePV2012>
+  </rdf:Description>
+ </rdf:RDF>
+</x:xmpmeta>

@@ -1,0 +1,312 @@
+#version 310 es
+#extension GL_GOOGLE_include_directive : require
+// Stage 2, one invocation per pixel: Malvar-He-Cutler demosaic, colour smoothing and sharpening,
+// camera RGB to linear sRGB, exposure, OKLab saturation/vibrance, highlight shoulder, sRGB encoding,
+// Clarity/Texture, the recipe's look table, vignette, grain, rotation to upright. Mirrors CpuDeveloper.develop/finishAt
+// exactly; keep them in step.
+precision highp float;
+precision highp int;
+precision highp sampler2D;
+precision highp sampler3D;
+precision highp image2D;
+
+layout(local_size_x = 16, local_size_y = 16) in;
+
+layout(r32f, binding = 0) readonly uniform image2D uCfa;
+layout(rgba8, binding = 1) writeonly uniform image2D uOut;
+layout(binding = 2) uniform sampler3D uLook;     // RGBA32F, n x n x n: red along x, green y, blue z
+layout(binding = 3) uniform sampler2D uBlurS;    // R32F, low resolution: Texture surroundings
+layout(binding = 4) uniform sampler2D uBlurL;    // R32F, low resolution: Clarity surroundings
+
+uniform ivec2 uSize;
+uniform ivec4 uPattern;
+uniform vec3 uRow0;     // camera RGB to linear sRGB, by rows
+uniform vec3 uRow1;
+uniform vec3 uRow2;
+uniform float uExposure;
+uniform float uSaturation;
+uniform float uVibrance;
+uniform int uLookSize;
+uniform int uRotation;  // clockwise: 0, 90, 180, 270
+uniform float uKnee;    // linear level where the highlight shoulder starts
+uniform ivec2 uLowSize;
+uniform float uClarity;
+uniform float uTexture;
+uniform float uVignette;
+uniform float uGrainAmount;
+uniform float uGrainCell;
+uniform float uGrainRoughness;
+uniform int uGrainSeed;
+uniform float uSharpen;          // DevelopParams.sharpen
+uniform float uChromaSmoothing;  // DevelopParams.chromaSmoothing
+uniform float uSharpenMask;      // DevelopParams.sharpenMask
+uniform float uVignetteStart;    // DevelopParams.vignetteStart
+uniform float uVignetteEnd;      // DevelopParams.vignetteEnd
+
+#include "common.glsl"
+
+const int BLOCK = 4;                 // LocalContrast.BLOCK
+const float CLARITY_GAIN = 0.6;      // LocalContrast.CLARITY_GAIN
+const float TEXTURE_GAIN = 0.8;      // LocalContrast.TEXTURE_GAIN
+const float VIGNETTE_GAIN = 0.8;     // CpuDeveloper.VIGNETTE_GAIN
+const float GRAIN_STRENGTH = 0.09;   // Grain.STRENGTH
+const int CHROMA_QUADS = 2;          // CpuDeveloper.CHROMA_QUADS
+const float CHROMA_SPATIAL = 0.08;   // CpuDeveloper.CHROMA_SPATIAL
+const float CHROMA_RANGE = 1.0;      // CpuDeveloper.CHROMA_RANGE
+const float MASK_DETAIL = 0.05;      // CpuDeveloper.MASK_DETAIL
+
+int reflectIndex(int i, int n) { return i < 0 ? -i : (i >= n ? 2 * n - 2 - i : i); }
+
+float at(int x, int y) {
+    return imageLoad(uCfa, ivec2(reflectIndex(x, uSize.x), reflectIndex(y, uSize.y))).r;
+}
+
+int channelAt(int x, int y) { return uPattern[(x & 1) + 2 * (y & 1)]; }
+
+vec3 demosaic(int x, int y) {
+    int c = channelAt(x, y);
+    float v = at(x, y);
+    float r;
+    float g;
+    float b;
+    if (c == 1) {
+        float horizontal = (8.0 * v + (at(x - 1, y) + at(x + 1, y)) * 4.0) -
+            (at(x - 2, y) + at(x + 2, y) + at(x - 1, y - 1) + at(x + 1, y - 1) + at(x - 1, y + 1) + at(x + 1, y + 1)) +
+            (at(x, y - 2) + at(x, y + 2)) * 0.5 - 3.0 * v;
+        float vertical = (8.0 * v + (at(x, y - 1) + at(x, y + 1)) * 4.0) -
+            (at(x, y - 2) + at(x, y + 2) + at(x - 1, y - 1) + at(x + 1, y - 1) + at(x - 1, y + 1) + at(x + 1, y + 1)) +
+            (at(x - 2, y) + at(x + 2, y)) * 0.5 - 3.0 * v;
+        g = v;
+        if (channelAt(x + 1, y) == 0) {
+            r = horizontal / 8.0;
+            b = vertical / 8.0;
+        } else {
+            b = horizontal / 8.0;
+            r = vertical / 8.0;
+        }
+    } else {
+        float green = (4.0 * v + 2.0 * (at(x - 1, y) + at(x + 1, y) + at(x, y - 1) + at(x, y + 1)) -
+            (at(x - 2, y) + at(x + 2, y) + at(x, y - 2) + at(x, y + 2))) / 8.0;
+        float opposite = (6.0 * v + 2.0 * (at(x - 1, y - 1) + at(x + 1, y - 1) + at(x - 1, y + 1) + at(x + 1, y + 1)) -
+            1.5 * (at(x - 2, y) + at(x + 2, y) + at(x, y - 2) + at(x, y + 2))) / 8.0;
+        g = green;
+        if (c == 0) {
+            r = v;
+            b = opposite;
+        } else {
+            b = v;
+            r = opposite;
+        }
+    }
+    return clamp(vec3(r, g, b), 0.0, 1.0);
+}
+
+// CpuDeveloper.refine: colour smoothing and sharpening from the CFA samples around the pixel.
+const float BINOMIAL[5] = float[5](1.0, 4.0, 6.0, 4.0, 1.0);
+
+vec3 refine(int x, int y, vec3 c) {
+    float r = c.r;
+    float g = c.g;
+    float b = c.b;
+    float lc = (r + 2.0 * g + b) * 0.25;
+    float sum = 0.0;
+    for (int dy = -2; dy <= 2; dy++) {
+        for (int dx = -2; dx <= 2; dx++) sum += BINOMIAL[dx + 2] * BINOMIAL[dy + 2] * at(x + dx, y + dy);
+    }
+    float lb = sum / 256.0;
+    if (uChromaSmoothing != 0.0 && lb > 1e-5) {
+        float sr = 0.0;
+        float sg = 0.0;
+        float sb = 0.0;
+        float sl = 0.0;
+        int qx0 = (x & ~1) - 2 * CHROMA_QUADS;
+        int qy0 = (y & ~1) - 2 * CHROMA_QUADS;
+        for (int j = 0; j <= 2 * CHROMA_QUADS; j++) {
+            for (int i = 0; i <= 2 * CHROMA_QUADS; i++) {
+                int qx = qx0 + 2 * i;
+                int qy = qy0 + 2 * j;
+                float qr = 0.0;
+                float qg = 0.0;
+                float qb = 0.0;
+                for (int k = 0; k < 4; k++) {
+                    int sx = qx + (k & 1);
+                    int sy = qy + (k >> 1);
+                    float v = at(sx, sy);
+                    int ch = channelAt(sx, sy);
+                    if (ch == 0) qr = v;
+                    else if (ch == 1) qg += v;
+                    else qb = v;
+                }
+                qg *= 0.5;
+                float lq = (qr + 2.0 * qg + qb) * 0.25;
+                float ddx = float(qx) + 0.5 - float(x);
+                float ddy = float(qy) + 0.5 - float(y);
+                float d = (lq - lb) / (CHROMA_RANGE * lb + 0.002);
+                float wq = exp(-(ddx * ddx + ddy * ddy) * CHROMA_SPATIAL) / (1.0 + d * d);
+                sr += wq * qr;
+                sg += wq * qg;
+                sb += wq * qb;
+                sl += wq * lq;
+            }
+        }
+        if (sl > 1e-6) {
+            float t = lc / sl;
+            r += (sr * t - r) * uChromaSmoothing;
+            g += (sg * t - g) * uChromaSmoothing;
+            b += (sb * t - b) * uChromaSmoothing;
+        }
+    }
+    if (uSharpen != 0.0 && lc > 1e-5) {
+        float sc = sqrt(lc);
+        float detail = sc - sqrt(lb);
+        float mask = uSharpenMask > 0.0 ? smoothstepF(0.0, uSharpenMask * MASK_DETAIL, abs(detail)) : 1.0;
+        float s = max(0.0, sc + uSharpen * mask * detail);
+        float m = min(s * s / lc, 4.0);
+        r *= m;
+        g *= m;
+        b *= m;
+    }
+    return clamp(vec3(r, g, b), 0.0, 1.0);
+}
+
+// LookLut.apply: trilinear with explicit a + (b - a) * t so it rounds like the Kotlin code.
+vec3 lookAt(int r, int g, int b) { return texelFetch(uLook, ivec3(r, g, b), 0).rgb; }
+
+vec3 lerp3(vec3 a, vec3 b, float t) { return a + (b - a) * t; }
+
+vec3 lookLut(vec3 c) {
+    int n = uLookSize;
+    vec3 f = clamp(c, 0.0, 1.0) * float(n - 1);
+    int r0 = min(int(f.r), n - 2);
+    int g0 = min(int(f.g), n - 2);
+    int b0 = min(int(f.b), n - 2);
+    float tr = f.r - float(r0);
+    float tg = f.g - float(g0);
+    float tb = f.b - float(b0);
+    vec3 c00 = lerp3(lookAt(r0, g0, b0), lookAt(r0 + 1, g0, b0), tr);
+    vec3 c10 = lerp3(lookAt(r0, g0 + 1, b0), lookAt(r0 + 1, g0 + 1, b0), tr);
+    vec3 c01 = lerp3(lookAt(r0, g0, b0 + 1), lookAt(r0 + 1, g0, b0 + 1), tr);
+    vec3 c11 = lerp3(lookAt(r0, g0 + 1, b0 + 1), lookAt(r0 + 1, g0 + 1, b0 + 1), tr);
+    return lerp3(lerp3(c00, c10, tg), lerp3(c01, c11, tg), tb);
+}
+
+// LocalContrast.sample: bilinear read of a low-resolution image at a sensor position.
+float sampleLow(sampler2D img, int x, int y) {
+    int lw = uLowSize.x;
+    int lh = uLowSize.y;
+    float u = clamp((float(x) - 1.5) / float(BLOCK), 0.0, float(lw - 1));
+    float v = clamp((float(y) - 1.5) / float(BLOCK), 0.0, float(lh - 1));
+    int i0 = min(int(u), max(lw - 2, 0));
+    int j0 = min(int(v), max(lh - 2, 0));
+    int i1 = min(i0 + 1, lw - 1);
+    int j1 = min(j0 + 1, lh - 1);
+    float fu = u - float(i0);
+    float fv = v - float(j0);
+    float a = texelFetch(img, ivec2(i0, j0), 0).r;
+    float b = texelFetch(img, ivec2(i1, j0), 0).r;
+    float c = texelFetch(img, ivec2(i0, j1), 0).r;
+    float d = texelFetch(img, ivec2(i1, j1), 0).r;
+    float top = a + (b - a) * fu;
+    float bottom = c + (d - c) * fu;
+    return top + (bottom - top) * fv;
+}
+
+// Grain.pcg / lattice / valueNoise / at / weight
+uint pcg(uint v) {
+    uint state = v * 747796405u + 2891336453u;
+    uint word = ((state >> ((state >> 28u) + 4u)) ^ state) * 277803737u;
+    return (word >> 22u) ^ word;
+}
+
+float lattice(int x, int y, int seed) {
+    uint h = pcg(uint(x) + pcg(uint(y) + pcg(uint(seed))));
+    return float(h & 65535u) / 65535.0 * 2.0 - 1.0;
+}
+
+float valueNoise(float px, float py, float cell, int seed) {
+    float fx = px / cell;
+    float fy = py / cell;
+    float ix = floor(fx);
+    float iy = floor(fy);
+    float tx = fx - ix;
+    float ty = fy - iy;
+    float sx = tx * tx * (3.0 - 2.0 * tx);
+    float sy = ty * ty * (3.0 - 2.0 * ty);
+    int x0 = int(ix);
+    int y0 = int(iy);
+    float a = lattice(x0, y0, seed);
+    float b = lattice(x0 + 1, y0, seed);
+    float c = lattice(x0, y0 + 1, seed);
+    float d = lattice(x0 + 1, y0 + 1, seed);
+    float top = a + (b - a) * sx;
+    float bottom = c + (d - c) * sx;
+    return top + (bottom - top) * sy;
+}
+
+float grain(ivec2 o) {
+    float px = float(o.x) + 0.5;
+    float py = float(o.y) + 0.5;
+    // A second lattice turned by about 37 degrees (offset so coordinates stay positive).
+    float rx = 0.8 * px - 0.6 * py + 8192.0;
+    float ry = 0.6 * px + 0.8 * py;
+    float coarse = (valueNoise(px, py, uGrainCell, uGrainSeed) + valueNoise(rx, ry, uGrainCell, uGrainSeed + 2)) * 0.70710678;
+    float fine = (valueNoise(px, py, uGrainCell * 0.5, uGrainSeed + 1) + valueNoise(rx, ry, uGrainCell * 0.5, uGrainSeed + 3)) * 0.70710678;
+    float k = 0.5 * uGrainRoughness;
+    return coarse * (1.0 - k) + fine * k;
+}
+
+float grainWeight(float y) { return 1.0 - 0.85 * smoothstepF(0.8, 1.0, y); }
+
+// CpuDeveloper.vignetteGain
+float vignetteGain(ivec2 o, ivec2 outSize) {
+    float hw = float(outSize.x) / 2.0;
+    float hh = float(outSize.y) / 2.0;
+    float dx = (float(o.x) + 0.5 - hw) / hw;
+    float dy = (float(o.y) + 0.5 - hh) / hh;
+    float r = sqrt((dx * dx + dy * dy) / 2.0);
+    return max(0.0, 1.0 + VIGNETTE_GAIN * uVignette * smoothstepF(uVignetteStart, uVignetteEnd, r));
+}
+
+// CpuDeveloper.finishAt
+vec3 finishPixel(vec3 lin, ivec2 s, ivec2 o, ivec2 outSize) {
+    vec3 e = shoulderEncode(linearLook(lin, uExposure, uSaturation, uVibrance), uKnee);
+    if (uClarity != 0.0 || uTexture != 0.0) {
+        float y = luma(e);
+        if (y > 1e-4) {
+            float small = sampleLow(uBlurS, s.x, s.y);
+            float large = sampleLow(uBlurL, s.x, s.y);
+            float mid = clamp(4.0 * y * (1.0 - y), 0.0, 1.0);
+            float adjusted = y + CLARITY_GAIN * uClarity * mid * (y - large) + TEXTURE_GAIN * uTexture * (y - small);
+            float k = adjusted / y;
+            e = clamp(e * k, 0.0, 1.0);
+        }
+    }
+    vec3 c = lookLut(e);
+    if (uVignette != 0.0) c = clamp(c * vignetteGain(o, outSize), 0.0, 1.0);
+    if (uGrainAmount > 0.0) {
+        float n = grain(o) * GRAIN_STRENGTH * uGrainAmount * grainWeight(luma(c));
+        c = clamp(c + n, 0.0, 1.0);
+    }
+    return c;
+}
+
+ivec2 destination(ivec2 s) {
+    if (uRotation == 90) return ivec2(uSize.y - 1 - s.y, s.x);
+    if (uRotation == 180) return ivec2(uSize.x - 1 - s.x, uSize.y - 1 - s.y);
+    if (uRotation == 270) return ivec2(s.y, uSize.x - 1 - s.x);
+    return s;
+}
+
+void main() {
+    ivec2 p = ivec2(gl_GlobalInvocationID.xy);
+    if (p.x >= uSize.x || p.y >= uSize.y) return;
+    vec3 cam = demosaic(p.x, p.y);
+    if (uSharpen != 0.0 || uChromaSmoothing != 0.0) cam = refine(p.x, p.y, cam);
+    vec3 lin = vec3(
+        uRow0.x * cam.r + uRow0.y * cam.g + uRow0.z * cam.b,
+        uRow1.x * cam.r + uRow1.y * cam.g + uRow1.z * cam.b,
+        uRow2.x * cam.r + uRow2.y * cam.g + uRow2.z * cam.b);
+    ivec2 outSize = (uRotation == 90 || uRotation == 270) ? uSize.yx : uSize;
+    ivec2 o = destination(p);
+    imageStore(uOut, o, vec4(finishPixel(lin, p, o, outSize), 1.0));
+}

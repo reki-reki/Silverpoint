@@ -1,0 +1,2031 @@
+{
+  "Reportage": {
+    "file": "Reportage.xmp",
+    "set": "core",
+    "group": "Recipes",
+    "look": "Muted, documentary. Deep dusky blues, restrained yellows/greens, firm contrast.",
+    "best_for": "Street, travel, cityscapes, overcast light",
+    "params": {
+      "Contrast2012": 14,
+      "Highlights2012": -35,
+      "Shadows2012": 8,
+      "Whites2012": -5,
+      "Blacks2012": -12,
+      "Texture": 6,
+      "Clarity2012": 6,
+      "Dehaze": 4,
+      "Vibrance": -8,
+      "Saturation": -16,
+      "SplitToningShadowHue": 215,
+      "SplitToningShadowSaturation": 10,
+      "SplitToningHighlightHue": 45,
+      "SplitToningHighlightSaturation": 8,
+      "SplitToningBalance": 0,
+      "GrainAmount": 22,
+      "GrainSize": 25,
+      "GrainFrequency": 50,
+      "PostCropVignetteAmount": -6,
+      "curve": [
+        [
+          0,
+          6
+        ],
+        [
+          64,
+          56
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          192,
+          202
+        ],
+        [
+          255,
+          252
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": 0,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": -3,
+      "SaturationAdjustmentOrange": -8,
+      "LuminanceAdjustmentOrange": 4,
+      "HueAdjustmentYellow": -12,
+      "SaturationAdjustmentYellow": -28,
+      "LuminanceAdjustmentYellow": 6,
+      "HueAdjustmentGreen": 10,
+      "SaturationAdjustmentGreen": -22,
+      "LuminanceAdjustmentGreen": -10,
+      "HueAdjustmentAqua": 0,
+      "SaturationAdjustmentAqua": -15,
+      "LuminanceAdjustmentAqua": -5,
+      "HueAdjustmentBlue": 8,
+      "SaturationAdjustmentBlue": -8,
+      "LuminanceAdjustmentBlue": -16,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -10,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -10,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.153,
+          0.374,
+          0.614,
+          0.822,
+          1.0
+        ],
+        "chroma": [
+          0.97,
+          0.894,
+          0.88,
+          1.038,
+          1.066,
+          0.928
+        ],
+        "hue": [
+          2.6,
+          -12.2,
+          0.8,
+          1.9,
+          -4.3,
+          -7.1
+        ],
+        "shadowTint": [
+          -0.0047,
+          0.0022
+        ],
+        "highlightTint": [
+          0.0012,
+          -0.0028
+        ]
+      }
+    }
+  },
+  "Soft Portrait": {
+    "file": "Soft_Portrait.xmp",
+    "set": "core",
+    "group": "Recipes",
+    "look": "Soft, warm skin, pastel greens, lifted shadows, low contrast, gentle film fade.",
+    "best_for": "Portraits, lifestyle, golden hour",
+    "params": {
+      "Exposure2012": 0.15,
+      "Contrast2012": -8,
+      "Highlights2012": -45,
+      "Shadows2012": 25,
+      "Whites2012": 5,
+      "Blacks2012": 6,
+      "Texture": -4,
+      "Clarity2012": -4,
+      "Vibrance": 6,
+      "Saturation": -8,
+      "SplitToningShadowHue": 190,
+      "SplitToningShadowSaturation": 6,
+      "SplitToningHighlightHue": 35,
+      "SplitToningHighlightSaturation": 14,
+      "SplitToningBalance": 10,
+      "GrainAmount": 18,
+      "GrainSize": 22,
+      "GrainFrequency": 55,
+      "curve": [
+        [
+          0,
+          14
+        ],
+        [
+          64,
+          66
+        ],
+        [
+          128,
+          134
+        ],
+        [
+          192,
+          198
+        ],
+        [
+          255,
+          248
+        ]
+      ],
+      "HueAdjustmentRed": 2,
+      "SaturationAdjustmentRed": -4,
+      "LuminanceAdjustmentRed": 4,
+      "HueAdjustmentOrange": -5,
+      "SaturationAdjustmentOrange": -4,
+      "LuminanceAdjustmentOrange": 10,
+      "HueAdjustmentYellow": -6,
+      "SaturationAdjustmentYellow": -18,
+      "LuminanceAdjustmentYellow": 6,
+      "HueAdjustmentGreen": 20,
+      "SaturationAdjustmentGreen": -22,
+      "LuminanceAdjustmentGreen": 2,
+      "HueAdjustmentAqua": -8,
+      "SaturationAdjustmentAqua": -10,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": -4,
+      "SaturationAdjustmentBlue": -14,
+      "LuminanceAdjustmentBlue": 6,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -8,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -4,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Slide 64": {
+    "file": "Slide_64.xmp",
+    "set": "core",
+    "group": "Recipes",
+    "look": "Rich reds, warm highlights, cool deep blues, high contrast, vintage slide feel.",
+    "best_for": "Cars, travel, sunny outdoor scenes",
+    "params": {
+      "Contrast2012": 20,
+      "Highlights2012": -32,
+      "Shadows2012": -4,
+      "Whites2012": 10,
+      "Blacks2012": -16,
+      "Texture": 8,
+      "Clarity2012": 8,
+      "Dehaze": 5,
+      "Vibrance": 6,
+      "Saturation": 0,
+      "SplitToningShadowHue": 230,
+      "SplitToningShadowSaturation": 6,
+      "SplitToningHighlightHue": 40,
+      "SplitToningHighlightSaturation": 14,
+      "SplitToningBalance": 8,
+      "GrainAmount": 20,
+      "GrainSize": 25,
+      "GrainFrequency": 50,
+      "PostCropVignetteAmount": -8,
+      "curve": [
+        [
+          0,
+          4
+        ],
+        [
+          64,
+          54
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          192,
+          206
+        ],
+        [
+          255,
+          252
+        ]
+      ],
+      "HueAdjustmentRed": -3,
+      "SaturationAdjustmentRed": 16,
+      "LuminanceAdjustmentRed": -4,
+      "HueAdjustmentOrange": 0,
+      "SaturationAdjustmentOrange": 6,
+      "LuminanceAdjustmentOrange": 4,
+      "HueAdjustmentYellow": -9,
+      "SaturationAdjustmentYellow": -6,
+      "LuminanceAdjustmentYellow": 8,
+      "HueAdjustmentGreen": 14,
+      "SaturationAdjustmentGreen": -12,
+      "LuminanceAdjustmentGreen": -10,
+      "HueAdjustmentAqua": 0,
+      "SaturationAdjustmentAqua": -6,
+      "LuminanceAdjustmentAqua": -6,
+      "HueAdjustmentBlue": -5,
+      "SaturationAdjustmentBlue": 8,
+      "LuminanceAdjustmentBlue": -16,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": 0,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": 6,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Street Negative": {
+    "file": "Street_Negative.xmp",
+    "set": "core",
+    "group": "Recipes",
+    "look": "Teal shadows, warm-magenta highlights, hard contrast, crushed blacks, cinematic street.",
+    "best_for": "Urban, night/neon, moody street",
+    "params": {
+      "Contrast2012": 26,
+      "Highlights2012": -20,
+      "Shadows2012": -6,
+      "Whites2012": 4,
+      "Blacks2012": -22,
+      "Texture": 6,
+      "Clarity2012": 10,
+      "Vibrance": 0,
+      "Saturation": 8,
+      "SplitToningShadowHue": 190,
+      "SplitToningShadowSaturation": 20,
+      "SplitToningHighlightHue": 15,
+      "SplitToningHighlightSaturation": 12,
+      "SplitToningBalance": -10,
+      "GrainAmount": 32,
+      "GrainSize": 30,
+      "GrainFrequency": 55,
+      "PostCropVignetteAmount": -10,
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          50
+        ],
+        [
+          128,
+          126
+        ],
+        [
+          192,
+          208
+        ],
+        [
+          255,
+          255
+        ]
+      ],
+      "HueAdjustmentRed": 4,
+      "SaturationAdjustmentRed": 6,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": -4,
+      "SaturationAdjustmentOrange": 0,
+      "LuminanceAdjustmentOrange": 4,
+      "HueAdjustmentYellow": -5,
+      "SaturationAdjustmentYellow": -12,
+      "LuminanceAdjustmentYellow": 0,
+      "HueAdjustmentGreen": 16,
+      "SaturationAdjustmentGreen": -4,
+      "LuminanceAdjustmentGreen": -12,
+      "HueAdjustmentAqua": 6,
+      "SaturationAdjustmentAqua": 8,
+      "LuminanceAdjustmentAqua": -4,
+      "HueAdjustmentBlue": 10,
+      "SaturationAdjustmentBlue": -6,
+      "LuminanceAdjustmentBlue": -10,
+      "HueAdjustmentPurple": 6,
+      "SaturationAdjustmentPurple": 0,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": -6,
+      "SaturationAdjustmentMagenta": 8,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Vivid Slide": {
+    "file": "Vivid_Slide.xmp",
+    "set": "core",
+    "group": "Recipes",
+    "look": "Saturated landscape slide film: punchy greens/blues/reds, strong contrast, fine grain.",
+    "best_for": "Landscapes, flowers, bright daylight",
+    "params": {
+      "Contrast2012": 20,
+      "Highlights2012": -25,
+      "Shadows2012": 0,
+      "Whites2012": 8,
+      "Blacks2012": -12,
+      "Texture": 10,
+      "Clarity2012": 10,
+      "Dehaze": 8,
+      "Vibrance": 16,
+      "Saturation": 22,
+      "SplitToningShadowHue": 240,
+      "SplitToningShadowSaturation": 4,
+      "SplitToningHighlightHue": 50,
+      "SplitToningHighlightSaturation": 6,
+      "SplitToningBalance": 0,
+      "GrainAmount": 10,
+      "GrainSize": 20,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          2
+        ],
+        [
+          64,
+          54
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          192,
+          204
+        ],
+        [
+          255,
+          254
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": 10,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": 0,
+      "SaturationAdjustmentOrange": 4,
+      "LuminanceAdjustmentOrange": 0,
+      "HueAdjustmentYellow": -4,
+      "SaturationAdjustmentYellow": 10,
+      "LuminanceAdjustmentYellow": 4,
+      "HueAdjustmentGreen": 6,
+      "SaturationAdjustmentGreen": 18,
+      "LuminanceAdjustmentGreen": -6,
+      "HueAdjustmentAqua": 0,
+      "SaturationAdjustmentAqua": 10,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": -4,
+      "SaturationAdjustmentBlue": 24,
+      "LuminanceAdjustmentBlue": -14,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": 8,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": 6,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.153,
+          0.384,
+          0.624,
+          0.84,
+          0.995
+        ],
+        "chroma": [
+          0.874,
+          0.857,
+          1.054,
+          1.023,
+          1.066,
+          0.996
+        ],
+        "hue": [
+          2.6,
+          -4.5,
+          -13.3,
+          1.5,
+          -4.5,
+          -4.7
+        ],
+        "shadowTint": [
+          -0.0019,
+          0.0006
+        ],
+        "highlightTint": [
+          0.0056,
+          -0.0003
+        ]
+      }
+    }
+  },
+  "Cinema Soft": {
+    "file": "Cinema_Soft.xmp",
+    "set": "core",
+    "group": "Recipes",
+    "look": "Low-saturation cinematic: flat contrast, soft highlight roll-off, lifted shadows, subtle teal/orange.",
+    "best_for": "Video-style stills, moody travel, hazy light",
+    "params": {
+      "Contrast2012": -12,
+      "Highlights2012": -50,
+      "Shadows2012": 30,
+      "Whites2012": -8,
+      "Blacks2012": 8,
+      "Texture": -2,
+      "Clarity2012": -4,
+      "Vibrance": -4,
+      "Saturation": -24,
+      "SplitToningShadowHue": 200,
+      "SplitToningShadowSaturation": 10,
+      "SplitToningHighlightHue": 40,
+      "SplitToningHighlightSaturation": 6,
+      "SplitToningBalance": 0,
+      "GrainAmount": 14,
+      "GrainSize": 22,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          18
+        ],
+        [
+          64,
+          66
+        ],
+        [
+          128,
+          130
+        ],
+        [
+          192,
+          192
+        ],
+        [
+          255,
+          240
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": -4,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": -2,
+      "SaturationAdjustmentOrange": -10,
+      "LuminanceAdjustmentOrange": 4,
+      "HueAdjustmentYellow": -8,
+      "SaturationAdjustmentYellow": -20,
+      "LuminanceAdjustmentYellow": 0,
+      "HueAdjustmentGreen": 10,
+      "SaturationAdjustmentGreen": -26,
+      "LuminanceAdjustmentGreen": -10,
+      "HueAdjustmentAqua": 4,
+      "SaturationAdjustmentAqua": -10,
+      "LuminanceAdjustmentAqua": -4,
+      "HueAdjustmentBlue": 4,
+      "SaturationAdjustmentBlue": -10,
+      "LuminanceAdjustmentBlue": -10,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -10,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -10,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Mono Yellow Filter": {
+    "file": "Mono_Yellow_Filter.xmp",
+    "set": "core",
+    "group": "Recipes",
+    "look": "Fine-grain black and white, darkened skies, bright foliage-neutral tones, rich blacks.",
+    "best_for": "Architecture, skies, high-contrast street",
+    "params": {
+      "ConvertToGrayscale": true,
+      "Contrast2012": 22,
+      "Highlights2012": -30,
+      "Shadows2012": 6,
+      "Whites2012": 8,
+      "Blacks2012": -16,
+      "Texture": 10,
+      "Clarity2012": 12,
+      "Dehaze": 6,
+      "Vibrance": 0,
+      "Saturation": 0,
+      "GrainAmount": 38,
+      "GrainSize": 30,
+      "GrainFrequency": 60,
+      "PostCropVignetteAmount": -10,
+      "GrayMixerRed": 10,
+      "GrayMixerOrange": 6,
+      "GrayMixerYellow": 12,
+      "GrayMixerGreen": -2,
+      "GrayMixerAqua": -14,
+      "GrayMixerBlue": -30,
+      "GrayMixerPurple": -10,
+      "GrayMixerMagenta": 0,
+      "curve": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          52
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          192,
+          208
+        ],
+        [
+          255,
+          255
+        ]
+      ],
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ]
+      }
+    }
+  },
+  "Sunny 200": {
+    "file": "Sunny_200.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Warm yellow-amber consumer film: sunny, nostalgic, rich but soft, bright highlights, visible fine grain.",
+    "best_for": "Sunny daylight, travel, everyday snapshots",
+    "params": {
+      "Exposure2012": 0.1,
+      "Contrast2012": 2,
+      "Highlights2012": -40,
+      "Shadows2012": 10,
+      "Whites2012": 4,
+      "Blacks2012": -4,
+      "Texture": -2,
+      "Clarity2012": -4,
+      "Vibrance": 8,
+      "Saturation": 6,
+      "SplitToningShadowHue": 35,
+      "SplitToningShadowSaturation": 8,
+      "SplitToningHighlightHue": 45,
+      "SplitToningHighlightSaturation": 20,
+      "SplitToningBalance": 10,
+      "GrainAmount": 40,
+      "GrainSize": 22,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          8
+        ],
+        [
+          64,
+          62
+        ],
+        [
+          128,
+          132
+        ],
+        [
+          192,
+          200
+        ],
+        [
+          255,
+          250
+        ]
+      ],
+      "HueAdjustmentRed": -2,
+      "SaturationAdjustmentRed": 4,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": -2,
+      "SaturationAdjustmentOrange": 6,
+      "LuminanceAdjustmentOrange": 6,
+      "HueAdjustmentYellow": -6,
+      "SaturationAdjustmentYellow": 10,
+      "LuminanceAdjustmentYellow": 6,
+      "HueAdjustmentGreen": -14,
+      "SaturationAdjustmentGreen": -10,
+      "LuminanceAdjustmentGreen": -6,
+      "HueAdjustmentAqua": -4,
+      "SaturationAdjustmentAqua": -8,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": 4,
+      "SaturationAdjustmentBlue": -8,
+      "LuminanceAdjustmentBlue": -6,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -4,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": 0,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Vibrant Arizona": {
+    "file": "Vibrant_Arizona.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Bright, warm, colourful and pastel; open shadows and soft highlights, like slightly overexposed colour negative film.",
+    "best_for": "Architecture, travel, stylised daylight scenes",
+    "params": {
+      "Exposure2012": 0.2,
+      "Contrast2012": -4,
+      "Highlights2012": -55,
+      "Shadows2012": 35,
+      "Whites2012": 2,
+      "Blacks2012": 4,
+      "Texture": -2,
+      "Clarity2012": -5,
+      "Vibrance": 14,
+      "Saturation": 8,
+      "SplitToningShadowHue": 30,
+      "SplitToningShadowSaturation": 12,
+      "SplitToningHighlightHue": 38,
+      "SplitToningHighlightSaturation": 22,
+      "SplitToningBalance": 15,
+      "GrainAmount": 14,
+      "GrainSize": 20,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          12
+        ],
+        [
+          64,
+          66
+        ],
+        [
+          128,
+          134
+        ],
+        [
+          192,
+          198
+        ],
+        [
+          255,
+          248
+        ]
+      ],
+      "HueAdjustmentRed": -2,
+      "SaturationAdjustmentRed": 8,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": 0,
+      "SaturationAdjustmentOrange": 10,
+      "LuminanceAdjustmentOrange": 6,
+      "HueAdjustmentYellow": -4,
+      "SaturationAdjustmentYellow": 6,
+      "LuminanceAdjustmentYellow": 8,
+      "HueAdjustmentGreen": -10,
+      "SaturationAdjustmentGreen": -12,
+      "LuminanceAdjustmentGreen": 0,
+      "HueAdjustmentAqua": 6,
+      "SaturationAdjustmentAqua": -2,
+      "LuminanceAdjustmentAqua": 8,
+      "HueAdjustmentBlue": -6,
+      "SaturationAdjustmentBlue": -4,
+      "LuminanceAdjustmentBlue": 10,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -4,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": 4,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Grit 400": {
+    "file": "Grit_400.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Gritty classic black and white: strong coarse grain, punchy mid-contrast, open-ish shadows.",
+    "best_for": "Street, documentary, low light",
+    "params": {
+      "ConvertToGrayscale": true,
+      "Contrast2012": 26,
+      "Highlights2012": -18,
+      "Shadows2012": 16,
+      "Whites2012": 6,
+      "Blacks2012": -14,
+      "Texture": 8,
+      "Clarity2012": 16,
+      "Dehaze": 0,
+      "Vibrance": 0,
+      "Saturation": 0,
+      "GrainAmount": 58,
+      "GrainSize": 42,
+      "GrainFrequency": 45,
+      "PostCropVignetteAmount": -8,
+      "GrayMixerRed": 8,
+      "GrayMixerOrange": 4,
+      "GrayMixerYellow": 4,
+      "GrayMixerGreen": 0,
+      "GrayMixerAqua": -4,
+      "GrayMixerBlue": -12,
+      "GrayMixerPurple": -4,
+      "GrayMixerMagenta": 0,
+      "curve": [
+        [
+          0,
+          6
+        ],
+        [
+          64,
+          54
+        ],
+        [
+          128,
+          130
+        ],
+        [
+          192,
+          210
+        ],
+        [
+          255,
+          252
+        ]
+      ],
+      "match": {
+        "tone": [
+          0.0,
+          0.174,
+          0.405,
+          0.589,
+          0.829,
+          1.0
+        ]
+      }
+    }
+  },
+  "Natural Portrait 400": {
+    "file": "Natural_Portrait_400.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Natural and balanced: gentle warmth, pleasing skin, soft contrast, muted greens.",
+    "best_for": "Everyday, portraits, mixed/artificial light",
+    "params": {
+      "Exposure2012": 0.1,
+      "Contrast2012": -2,
+      "Highlights2012": -35,
+      "Shadows2012": 18,
+      "Whites2012": 2,
+      "Blacks2012": 2,
+      "Texture": 0,
+      "Clarity2012": 0,
+      "Vibrance": 6,
+      "Saturation": -4,
+      "SplitToningShadowHue": 200,
+      "SplitToningShadowSaturation": 5,
+      "SplitToningHighlightHue": 38,
+      "SplitToningHighlightSaturation": 10,
+      "SplitToningBalance": 5,
+      "GrainAmount": 18,
+      "GrainSize": 22,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          8
+        ],
+        [
+          64,
+          60
+        ],
+        [
+          128,
+          130
+        ],
+        [
+          192,
+          198
+        ],
+        [
+          255,
+          250
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": 0,
+      "LuminanceAdjustmentRed": 2,
+      "HueAdjustmentOrange": -4,
+      "SaturationAdjustmentOrange": 0,
+      "LuminanceAdjustmentOrange": 6,
+      "HueAdjustmentYellow": -8,
+      "SaturationAdjustmentYellow": -12,
+      "LuminanceAdjustmentYellow": 4,
+      "HueAdjustmentGreen": 10,
+      "SaturationAdjustmentGreen": -16,
+      "LuminanceAdjustmentGreen": -4,
+      "HueAdjustmentAqua": -6,
+      "SaturationAdjustmentAqua": -6,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": 2,
+      "SaturationAdjustmentBlue": -10,
+      "LuminanceAdjustmentBlue": 4,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -6,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -2,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Portrait 800": {
+    "file": "Portrait_800.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Portrait colour with a faster-film feel: heavier grain, slightly warmer and softer, a bit less vivid.",
+    "best_for": "Evening, indoor, available light",
+    "params": {
+      "Exposure2012": 0.15,
+      "Contrast2012": 2,
+      "Highlights2012": -38,
+      "Shadows2012": 20,
+      "Whites2012": 0,
+      "Blacks2012": 4,
+      "Texture": -2,
+      "Clarity2012": -2,
+      "Vibrance": 4,
+      "Saturation": -8,
+      "SplitToningShadowHue": 210,
+      "SplitToningShadowSaturation": 6,
+      "SplitToningHighlightHue": 36,
+      "SplitToningHighlightSaturation": 14,
+      "SplitToningBalance": 8,
+      "GrainAmount": 48,
+      "GrainSize": 30,
+      "GrainFrequency": 50,
+      "PostCropVignetteAmount": -6,
+      "curve": [
+        [
+          0,
+          10
+        ],
+        [
+          64,
+          60
+        ],
+        [
+          128,
+          130
+        ],
+        [
+          192,
+          198
+        ],
+        [
+          255,
+          248
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": 0,
+      "LuminanceAdjustmentRed": 2,
+      "HueAdjustmentOrange": -4,
+      "SaturationAdjustmentOrange": 0,
+      "LuminanceAdjustmentOrange": 6,
+      "HueAdjustmentYellow": -8,
+      "SaturationAdjustmentYellow": -14,
+      "LuminanceAdjustmentYellow": 4,
+      "HueAdjustmentGreen": 10,
+      "SaturationAdjustmentGreen": -18,
+      "LuminanceAdjustmentGreen": -4,
+      "HueAdjustmentAqua": -6,
+      "SaturationAdjustmentAqua": -8,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": 2,
+      "SaturationAdjustmentBlue": -12,
+      "LuminanceAdjustmentBlue": 4,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -6,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -2,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Tungsten 800": {
+    "file": "Tungsten_800.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Night-cinema tungsten film: cool teal-blue cast, warm glowing highlights, soft contrast, heavy grain, dreamy glow.",
+    "best_for": "Night, neon, city lights, rain",
+    "params": {
+      "Contrast2012": -4,
+      "Highlights2012": -40,
+      "Shadows2012": 20,
+      "Whites2012": -4,
+      "Blacks2012": 4,
+      "Texture": -4,
+      "Clarity2012": -8,
+      "Dehaze": -4,
+      "Vibrance": 4,
+      "Saturation": 4,
+      "SplitToningShadowHue": 205,
+      "SplitToningShadowSaturation": 22,
+      "SplitToningHighlightHue": 22,
+      "SplitToningHighlightSaturation": 14,
+      "SplitToningBalance": -5,
+      "GrainAmount": 52,
+      "GrainSize": 35,
+      "GrainFrequency": 50,
+      "PostCropVignetteAmount": -8,
+      "curve": [
+        [
+          0,
+          10
+        ],
+        [
+          64,
+          62
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          192,
+          196
+        ],
+        [
+          255,
+          246
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": 10,
+      "LuminanceAdjustmentRed": 2,
+      "HueAdjustmentOrange": -6,
+      "SaturationAdjustmentOrange": 6,
+      "LuminanceAdjustmentOrange": 4,
+      "HueAdjustmentYellow": -4,
+      "SaturationAdjustmentYellow": -8,
+      "LuminanceAdjustmentYellow": 0,
+      "HueAdjustmentGreen": 18,
+      "SaturationAdjustmentGreen": -20,
+      "LuminanceAdjustmentGreen": -10,
+      "HueAdjustmentAqua": 0,
+      "SaturationAdjustmentAqua": 14,
+      "LuminanceAdjustmentAqua": -2,
+      "HueAdjustmentBlue": -8,
+      "SaturationAdjustmentBlue": 10,
+      "LuminanceAdjustmentBlue": -6,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": 4,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": 6,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Pacific Blues": {
+    "file": "Pacific_Blues.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Warm daylight with rich blue/turquoise water and sky, vintage film grain, summer beach mood.",
+    "best_for": "Beach, coast, summer travel",
+    "params": {
+      "Contrast2012": 8,
+      "Highlights2012": -50,
+      "Shadows2012": 20,
+      "Whites2012": 0,
+      "Blacks2012": -10,
+      "Texture": 0,
+      "Clarity2012": -4,
+      "Vibrance": 10,
+      "Saturation": 8,
+      "SplitToningShadowHue": 195,
+      "SplitToningShadowSaturation": 14,
+      "SplitToningHighlightHue": 40,
+      "SplitToningHighlightSaturation": 12,
+      "SplitToningBalance": 0,
+      "GrainAmount": 42,
+      "GrainSize": 38,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          4
+        ],
+        [
+          64,
+          56
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          192,
+          204
+        ],
+        [
+          255,
+          250
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": 0,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": -3,
+      "SaturationAdjustmentOrange": -4,
+      "LuminanceAdjustmentOrange": 4,
+      "HueAdjustmentYellow": -6,
+      "SaturationAdjustmentYellow": -6,
+      "LuminanceAdjustmentYellow": 4,
+      "HueAdjustmentGreen": 12,
+      "SaturationAdjustmentGreen": -8,
+      "LuminanceAdjustmentGreen": -6,
+      "HueAdjustmentAqua": -8,
+      "SaturationAdjustmentAqua": 28,
+      "LuminanceAdjustmentAqua": -4,
+      "HueAdjustmentBlue": -12,
+      "SaturationAdjustmentBlue": 22,
+      "LuminanceAdjustmentBlue": -8,
+      "HueAdjustmentPurple": -4,
+      "SaturationAdjustmentPurple": 4,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -4,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Clean Negative": {
+    "file": "Clean_Negative.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Clean, natural negative-film colour: accurate skin and greens, moderate contrast, very light grain.",
+    "best_for": "Everyday, travel, anything needing true-to-life colour",
+    "params": {
+      "Contrast2012": 6,
+      "Highlights2012": -25,
+      "Shadows2012": 10,
+      "Whites2012": 2,
+      "Blacks2012": -6,
+      "Texture": 2,
+      "Clarity2012": 0,
+      "Vibrance": 6,
+      "Saturation": 2,
+      "GrainAmount": 10,
+      "GrainSize": 20,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          3
+        ],
+        [
+          64,
+          58
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          192,
+          200
+        ],
+        [
+          255,
+          252
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": 4,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": 0,
+      "SaturationAdjustmentOrange": 2,
+      "LuminanceAdjustmentOrange": 2,
+      "HueAdjustmentYellow": -2,
+      "SaturationAdjustmentYellow": 0,
+      "LuminanceAdjustmentYellow": 2,
+      "HueAdjustmentGreen": 2,
+      "SaturationAdjustmentGreen": -4,
+      "LuminanceAdjustmentGreen": -2,
+      "HueAdjustmentAqua": 0,
+      "SaturationAdjustmentAqua": 2,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": -2,
+      "SaturationAdjustmentBlue": 4,
+      "LuminanceAdjustmentBlue": -2,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": 0,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": 0,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Vivid Print": {
+    "file": "Vivid_Print.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Vivid consumer print film: punchy cyan-leaning greens, rich blues, warm skin, mild contrast bite.",
+    "best_for": "Everyday colour, street, nature",
+    "params": {
+      "Contrast2012": 14,
+      "Highlights2012": -20,
+      "Shadows2012": 6,
+      "Whites2012": 2,
+      "Blacks2012": -12,
+      "Texture": 4,
+      "Clarity2012": 4,
+      "Vibrance": 10,
+      "Saturation": 12,
+      "SplitToningShadowHue": 175,
+      "SplitToningShadowSaturation": 12,
+      "SplitToningHighlightHue": 25,
+      "SplitToningHighlightSaturation": 8,
+      "SplitToningBalance": -5,
+      "GrainAmount": 28,
+      "GrainSize": 26,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          2
+        ],
+        [
+          64,
+          52
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          192,
+          206
+        ],
+        [
+          255,
+          254
+        ]
+      ],
+      "HueAdjustmentRed": -4,
+      "SaturationAdjustmentRed": 8,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": -2,
+      "SaturationAdjustmentOrange": 4,
+      "LuminanceAdjustmentOrange": 2,
+      "HueAdjustmentYellow": -4,
+      "SaturationAdjustmentYellow": 4,
+      "LuminanceAdjustmentYellow": 2,
+      "HueAdjustmentGreen": 14,
+      "SaturationAdjustmentGreen": 14,
+      "LuminanceAdjustmentGreen": -6,
+      "HueAdjustmentAqua": 4,
+      "SaturationAdjustmentAqua": 8,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": -6,
+      "SaturationAdjustmentBlue": 14,
+      "LuminanceAdjustmentBlue": -8,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": 4,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": -4,
+      "SaturationAdjustmentMagenta": 6,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "California Summer": {
+    "file": "California_Summer.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Warm, sun-faded summer: amber highlights, lifted faded blacks, soft contrast, muted cool blues.",
+    "best_for": "Summer, golden hour, lifestyle",
+    "params": {
+      "Exposure2012": 0.2,
+      "Contrast2012": -6,
+      "Highlights2012": -35,
+      "Shadows2012": 24,
+      "Whites2012": -4,
+      "Blacks2012": 10,
+      "Texture": -2,
+      "Clarity2012": -4,
+      "Vibrance": 4,
+      "Saturation": -4,
+      "SplitToningShadowHue": 30,
+      "SplitToningShadowSaturation": 10,
+      "SplitToningHighlightHue": 42,
+      "SplitToningHighlightSaturation": 22,
+      "SplitToningBalance": 20,
+      "GrainAmount": 24,
+      "GrainSize": 24,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          20
+        ],
+        [
+          64,
+          70
+        ],
+        [
+          128,
+          136
+        ],
+        [
+          192,
+          200
+        ],
+        [
+          255,
+          244
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": 0,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": -2,
+      "SaturationAdjustmentOrange": -6,
+      "LuminanceAdjustmentOrange": 8,
+      "HueAdjustmentYellow": -8,
+      "SaturationAdjustmentYellow": -10,
+      "LuminanceAdjustmentYellow": 4,
+      "HueAdjustmentGreen": -12,
+      "SaturationAdjustmentGreen": -18,
+      "LuminanceAdjustmentGreen": -4,
+      "HueAdjustmentAqua": -6,
+      "SaturationAdjustmentAqua": -8,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": 0,
+      "SaturationAdjustmentBlue": -10,
+      "LuminanceAdjustmentBlue": 6,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -6,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -4,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.002,
+          0.164,
+          0.398,
+          0.635,
+          0.832,
+          0.998
+        ],
+        "chroma": [
+          0.938,
+          1.094,
+          0.921,
+          0.989,
+          1.054,
+          1.023
+        ],
+        "hue": [
+          5.4,
+          -7.3,
+          -3.8,
+          -0.6,
+          -1.7,
+          0.9
+        ],
+        "shadowTint": [
+          0.0041,
+          0.0025
+        ],
+        "highlightTint": [
+          0.0153,
+          0.0075
+        ]
+      }
+    }
+  },
+  "1976 Print": {
+    "file": "1976_Print.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Retro 70s print fade: yellowed warm highlights, greenish shadows, low contrast, heavy fade.",
+    "best_for": "Vintage mood, nostalgic travel, old-town scenes",
+    "params": {
+      "Exposure2012": 0.1,
+      "Contrast2012": -12,
+      "Highlights2012": -30,
+      "Shadows2012": 26,
+      "Whites2012": -8,
+      "Blacks2012": 14,
+      "Texture": -2,
+      "Clarity2012": -4,
+      "Vibrance": -2,
+      "Saturation": -12,
+      "SplitToningShadowHue": 165,
+      "SplitToningShadowSaturation": 10,
+      "SplitToningHighlightHue": 50,
+      "SplitToningHighlightSaturation": 22,
+      "SplitToningBalance": 10,
+      "GrainAmount": 30,
+      "GrainSize": 28,
+      "GrainFrequency": 50,
+      "PostCropVignetteAmount": -12,
+      "curve": [
+        [
+          0,
+          26
+        ],
+        [
+          64,
+          74
+        ],
+        [
+          128,
+          136
+        ],
+        [
+          192,
+          196
+        ],
+        [
+          255,
+          236
+        ]
+      ],
+      "HueAdjustmentRed": 2,
+      "SaturationAdjustmentRed": -4,
+      "LuminanceAdjustmentRed": 0,
+      "HueAdjustmentOrange": -2,
+      "SaturationAdjustmentOrange": -4,
+      "LuminanceAdjustmentOrange": 6,
+      "HueAdjustmentYellow": -10,
+      "SaturationAdjustmentYellow": -6,
+      "LuminanceAdjustmentYellow": 4,
+      "HueAdjustmentGreen": -14,
+      "SaturationAdjustmentGreen": -16,
+      "LuminanceAdjustmentGreen": -6,
+      "HueAdjustmentAqua": -8,
+      "SaturationAdjustmentAqua": -10,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": 2,
+      "SaturationAdjustmentBlue": -14,
+      "LuminanceAdjustmentBlue": 4,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -8,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -8,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Pastel Pro 160": {
+    "file": "Pastel_Pro_160.xmp",
+    "set": "popular",
+    "group": "Recipes",
+    "look": "Soft pastel pro negative: gentle contrast, creamy skin, airy highlights, delicate colour.",
+    "best_for": "Portraits, weddings, soft daylight",
+    "params": {
+      "Exposure2012": 0.1,
+      "Contrast2012": -10,
+      "Highlights2012": -40,
+      "Shadows2012": 28,
+      "Whites2012": 4,
+      "Blacks2012": 8,
+      "Texture": -4,
+      "Clarity2012": -4,
+      "Vibrance": 4,
+      "Saturation": -10,
+      "SplitToningShadowHue": 190,
+      "SplitToningShadowSaturation": 5,
+      "SplitToningHighlightHue": 20,
+      "SplitToningHighlightSaturation": 6,
+      "SplitToningBalance": 5,
+      "GrainAmount": 12,
+      "GrainSize": 20,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          14
+        ],
+        [
+          64,
+          68
+        ],
+        [
+          128,
+          132
+        ],
+        [
+          192,
+          198
+        ],
+        [
+          255,
+          246
+        ]
+      ],
+      "HueAdjustmentRed": 0,
+      "SaturationAdjustmentRed": -4,
+      "LuminanceAdjustmentRed": 2,
+      "HueAdjustmentOrange": -2,
+      "SaturationAdjustmentOrange": -8,
+      "LuminanceAdjustmentOrange": 10,
+      "HueAdjustmentYellow": -4,
+      "SaturationAdjustmentYellow": -10,
+      "LuminanceAdjustmentYellow": 4,
+      "HueAdjustmentGreen": 12,
+      "SaturationAdjustmentGreen": -22,
+      "LuminanceAdjustmentGreen": 4,
+      "HueAdjustmentAqua": 0,
+      "SaturationAdjustmentAqua": -8,
+      "LuminanceAdjustmentAqua": 4,
+      "HueAdjustmentBlue": -4,
+      "SaturationAdjustmentBlue": -14,
+      "LuminanceAdjustmentBlue": 6,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -8,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -4,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Saturated 100": {
+    "file": "Saturated_100.xmp",
+    "set": "popular",
+    "group": "Film",
+    "look": "Ultra-saturated, high-contrast fine-grain negative: vivid reds, deep blues, clean detail.",
+    "best_for": "Landscapes, cars, colourful scenes",
+    "params": {
+      "Contrast2012": 18,
+      "Highlights2012": -22,
+      "Shadows2012": -2,
+      "Whites2012": 6,
+      "Blacks2012": -12,
+      "Texture": 8,
+      "Clarity2012": 8,
+      "Dehaze": 4,
+      "Vibrance": 16,
+      "Saturation": 16,
+      "SplitToningShadowHue": 230,
+      "SplitToningShadowSaturation": 4,
+      "SplitToningHighlightHue": 42,
+      "SplitToningHighlightSaturation": 8,
+      "SplitToningBalance": 5,
+      "GrainAmount": 6,
+      "GrainSize": 18,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          2
+        ],
+        [
+          64,
+          52
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          192,
+          206
+        ],
+        [
+          255,
+          254
+        ]
+      ],
+      "HueAdjustmentRed": -4,
+      "SaturationAdjustmentRed": 18,
+      "LuminanceAdjustmentRed": -2,
+      "HueAdjustmentOrange": 0,
+      "SaturationAdjustmentOrange": 6,
+      "LuminanceAdjustmentOrange": 2,
+      "HueAdjustmentYellow": -4,
+      "SaturationAdjustmentYellow": 4,
+      "LuminanceAdjustmentYellow": 4,
+      "HueAdjustmentGreen": 4,
+      "SaturationAdjustmentGreen": 10,
+      "LuminanceAdjustmentGreen": -6,
+      "HueAdjustmentAqua": 0,
+      "SaturationAdjustmentAqua": 6,
+      "LuminanceAdjustmentAqua": 0,
+      "HueAdjustmentBlue": -2,
+      "SaturationAdjustmentBlue": 18,
+      "LuminanceAdjustmentBlue": -12,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": 4,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": 6,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "Airy 400": {
+    "file": "Airy_400.xmp",
+    "set": "popular",
+    "group": "Film",
+    "look": "Airy pastel wedding-film look: lifted blacks, minty green-teal shadows, soft skin, light overexposed feel.",
+    "best_for": "Weddings, portraits, bright shade, flowers",
+    "params": {
+      "Exposure2012": 0.3,
+      "Contrast2012": -10,
+      "Highlights2012": -45,
+      "Shadows2012": 32,
+      "Whites2012": 6,
+      "Blacks2012": 8,
+      "Texture": -3,
+      "Clarity2012": -4,
+      "Vibrance": 8,
+      "Saturation": -10,
+      "SplitToningShadowHue": 165,
+      "SplitToningShadowSaturation": 10,
+      "SplitToningHighlightHue": 20,
+      "SplitToningHighlightSaturation": 6,
+      "SplitToningBalance": 0,
+      "GrainAmount": 14,
+      "GrainSize": 20,
+      "GrainFrequency": 50,
+      "curve": [
+        [
+          0,
+          16
+        ],
+        [
+          64,
+          70
+        ],
+        [
+          128,
+          134
+        ],
+        [
+          192,
+          200
+        ],
+        [
+          255,
+          248
+        ]
+      ],
+      "HueAdjustmentRed": 2,
+      "SaturationAdjustmentRed": -4,
+      "LuminanceAdjustmentRed": 2,
+      "HueAdjustmentOrange": -2,
+      "SaturationAdjustmentOrange": -6,
+      "LuminanceAdjustmentOrange": 8,
+      "HueAdjustmentYellow": -4,
+      "SaturationAdjustmentYellow": -8,
+      "LuminanceAdjustmentYellow": 4,
+      "HueAdjustmentGreen": 14,
+      "SaturationAdjustmentGreen": -12,
+      "LuminanceAdjustmentGreen": 6,
+      "HueAdjustmentAqua": -4,
+      "SaturationAdjustmentAqua": -4,
+      "LuminanceAdjustmentAqua": 4,
+      "HueAdjustmentBlue": -8,
+      "SaturationAdjustmentBlue": -10,
+      "LuminanceAdjustmentBlue": 8,
+      "HueAdjustmentPurple": 0,
+      "SaturationAdjustmentPurple": -8,
+      "LuminanceAdjustmentPurple": 0,
+      "HueAdjustmentMagenta": 0,
+      "SaturationAdjustmentMagenta": -4,
+      "LuminanceAdjustmentMagenta": 0,
+      "match": {
+        "tone": [
+          0.0,
+          0.161,
+          0.39,
+          0.616,
+          0.831,
+          1.0
+        ],
+        "chroma": [
+          0.93,
+          1.0,
+          1.0,
+          1.0,
+          1.06,
+          1.0
+        ],
+        "hue": [
+          3.5,
+          -8.0,
+          0.0,
+          0.0,
+          -3.5,
+          0.0
+        ]
+      }
+    }
+  }
+}

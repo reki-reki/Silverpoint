@@ -1,0 +1,34 @@
+name: Bug report
+description: Something in Silverpoint does not work as expected
+labels: [bug]
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Phone model and One UI version
+      placeholder: Galaxy S25 Ultra, One UI 7, build ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Silverpoint version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, Diagnostics report, screenshots or sample files
+      description: Paste logs or attach files. Remove location data from photos first.

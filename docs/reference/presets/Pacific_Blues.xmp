@@ -1,0 +1,99 @@
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 7.0-c000">
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about=""
+    xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/"
+   crs:PresetType="Normal"
+   crs:Cluster=""
+   crs:UUID="0C1DE560E7434BE8B441F0774FC42C54"
+   crs:SupportsAmount="True"
+   crs:SupportsColor="True"
+   crs:SupportsMonochrome="True"
+   crs:SupportsHighDynamicRange="True"
+   crs:SupportsNormalDynamicRange="True"
+   crs:SupportsSceneReferred="True"
+   crs:SupportsOutputReferred="True"
+   crs:CameraModelRestriction=""
+   crs:Copyright=""
+   crs:ContactInfo=""
+   crs:Version="15.0"
+   crs:ProcessVersion="11.0"
+   crs:Contrast2012="+8"
+   crs:Highlights2012="-50"
+   crs:Shadows2012="+20"
+   crs:Whites2012="+0"
+   crs:Blacks2012="-10"
+   crs:Texture="+0"
+   crs:Clarity2012="-4"
+   crs:Vibrance="+10"
+   crs:Saturation="+8"
+   crs:SplitToningShadowHue="195"
+   crs:SplitToningShadowSaturation="14"
+   crs:SplitToningHighlightHue="40"
+   crs:SplitToningHighlightSaturation="12"
+   crs:SplitToningBalance="+0"
+   crs:GrainAmount="42"
+   crs:GrainSize="38"
+   crs:GrainFrequency="50"
+   crs:HueAdjustmentRed="+0"
+   crs:SaturationAdjustmentRed="+0"
+   crs:LuminanceAdjustmentRed="+0"
+   crs:HueAdjustmentOrange="-3"
+   crs:SaturationAdjustmentOrange="-4"
+   crs:LuminanceAdjustmentOrange="+4"
+   crs:HueAdjustmentYellow="-6"
+   crs:SaturationAdjustmentYellow="-6"
+   crs:LuminanceAdjustmentYellow="+4"
+   crs:HueAdjustmentGreen="+12"
+   crs:SaturationAdjustmentGreen="-8"
+   crs:LuminanceAdjustmentGreen="-6"
+   crs:HueAdjustmentAqua="-8"
+   crs:SaturationAdjustmentAqua="+28"
+   crs:LuminanceAdjustmentAqua="-4"
+   crs:HueAdjustmentBlue="-12"
+   crs:SaturationAdjustmentBlue="+22"
+   crs:LuminanceAdjustmentBlue="-8"
+   crs:HueAdjustmentPurple="-4"
+   crs:SaturationAdjustmentPurple="+4"
+   crs:LuminanceAdjustmentPurple="+0"
+   crs:HueAdjustmentMagenta="+0"
+   crs:SaturationAdjustmentMagenta="-4"
+   crs:LuminanceAdjustmentMagenta="+0"
+   crs:ToneCurveName2012="Custom"
+   crs:HasSettings="True">
+   <crs:Name>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Pacific Blues</rdf:li>
+    </rdf:Alt>
+   </crs:Name>
+   <crs:ShortName>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default"/>
+    </rdf:Alt>
+   </crs:ShortName>
+   <crs:SortName>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default"/>
+    </rdf:Alt>
+   </crs:SortName>
+   <crs:Group>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Silverpoint Recipes</rdf:li>
+    </rdf:Alt>
+   </crs:Group>
+   <crs:Description>
+    <rdf:Alt>
+     <rdf:li xml:lang="x-default">Warm daylight with rich blue/turquoise water and sky, vintage film grain, summer beach mood.</rdf:li>
+    </rdf:Alt>
+   </crs:Description>
+   <crs:ToneCurvePV2012>
+    <rdf:Seq>
+     <rdf:li>0, 4</rdf:li>
+     <rdf:li>64, 56</rdf:li>
+     <rdf:li>128, 128</rdf:li>
+     <rdf:li>192, 204</rdf:li>
+     <rdf:li>255, 250</rdf:li>
+    </rdf:Seq>
+   </crs:ToneCurvePV2012>
+  </rdf:Description>
+ </rdf:RDF>
+</x:xmpmeta>
