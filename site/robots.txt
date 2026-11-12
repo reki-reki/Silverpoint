@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reki-reki.github.io/Silverpoint/sitemap.xml
