@@ -4,12 +4,15 @@
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 ![Platform: Android 14+](https://img.shields.io/badge/platform-Android%2014%2B-brightgreen.svg)
 ![Status: beta](https://img.shields.io/badge/status-beta-yellow.svg)
+[![Download APK](https://img.shields.io/github/v/release/reki-reki/Silverpoint?label=download%20APK&color=ff7a45)](https://github.com/reki-reki/Silverpoint/releases/latest/download/Silverpoint.apk)
 
 **A RAW camera for the Samsung Galaxy S25 Ultra that skips Samsung's image processing and develops every photo with a film-style look.**
 
 Silverpoint captures a RAW frame through Android's Camera2 API, develops it on the GPU with its own pipeline, applies one of 21 film-inspired looks, and saves the finished JPEG straight to your Gallery.
 
 <p align="center"><img src="docs/brand/icon.png" width="112" alt="Silverpoint icon"></p>
+
+<p align="center"><a href="https://github.com/reki-reki/Silverpoint/releases/latest/download/Silverpoint.apk"><b>Download Silverpoint.apk</b></a> · <a href="https://github.com/reki-reki/Silverpoint/releases">all releases</a> · <a href="#install">how to install</a></p>
 
 <p align="center">
   <img src="docs/screenshots/camera_photo.jpg" width="23%" alt="Camera in Photo mode">
@@ -21,8 +24,7 @@ Silverpoint captures a RAW frame through Android's Camera2 API, develops it on t
 > **Status: beta (0.9.9).**
 > - **Done:** every feature below is built.
 > - **Checked on the phone:** the capability probe, the GPU self-test, the base colour rendering and the camera screen.
-> - **Not yet run end to end:** the full device checklist ([docs/DEVICE_TESTING.md](docs/DEVICE_TESTING.md)).
-> - **Before 1.0:** the device checklist ([docs/RELEASING.md](docs/RELEASING.md)).
+> - **Not yet run end to end:** the full device checklist ([docs/DEVICE_TESTING.md](docs/DEVICE_TESTING.md)); it is the main item left before 1.0 ([docs/RELEASING.md](docs/RELEASING.md)).
 
 ## Why
 
@@ -61,12 +63,15 @@ Samsung's camera app runs heavy multi-frame processing (HDR, AI scene tuning, Sa
 
 ## Install
 
-There is no store release yet.
+There is no store release yet; install the APK directly.
 
-- **Releases:** when a version is published, its APK is attached to the repository's **Releases** page.
-- **Development builds:** every push to `main` builds a debug APK in CI.
-  1. Open the latest run under **Actions** and download the `silverpoint-debug-apk` artifact.
-  2. Unzip it, copy `app-debug.apk` to the phone and install it. Allow installs from your file manager when Android asks.
+1. On the phone, download **[Silverpoint.apk](https://github.com/reki-reki/Silverpoint/releases/latest/download/Silverpoint.apk)** (always the latest release; older versions and checksums are on the [Releases](https://github.com/reki-reki/Silverpoint/releases) page).
+2. Open it and allow installs from your browser or file manager when Android asks.
+3. Open **Silverpoint** and allow camera access.
+
+Until a signing key is set up for releases, the APK is a debug build signed with a key that changes on every build. To move to a newer version, uninstall the old one first; your photos stay in the Gallery.
+
+**Development builds:** every push to `main` also builds a debug APK in CI. Open the latest run under **Actions**, download the `silverpoint-debug-apk` artifact (you need to be signed in to GitHub), unzip it and install `app-debug.apk` the same way.
 
 ## Using the app
 

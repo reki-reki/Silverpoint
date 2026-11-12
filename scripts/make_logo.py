@@ -3,7 +3,7 @@
 
 The mark is silver-halide grains on a golden-angle spiral, converging on one bright point. The same
 geometry is drawn by the app (ui/SilverpointMark.kt) and by the start-up animation
-(motion/src/Mark.tsx): grain i (from 1) sits at radius 3*sqrt(i) and angle i * 137.508 degrees,
+(motion/src/Mark.ts): grain i (from 1) sits at radius 3*sqrt(i) and angle i * 137.508 degrees,
 in a 108-unit box, until the radius passes 38.
 
     python3 scripts/make_logo.py

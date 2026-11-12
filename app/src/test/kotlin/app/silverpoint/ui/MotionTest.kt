@@ -112,7 +112,7 @@ class MotionTest {
         film("pro_close") { compose.onAllNodesWithText("1/125").onLast().performClick() }
     }
 
-    /** The look selector: All (26 looks) to B&W (2): the tabs must not move. */
+    /** The look selector: All (21 looks) to B&W (2): the tabs must not move. */
     @Test
     fun looksSwitchTab() {
         compose.setContent {

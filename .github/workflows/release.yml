@@ -1,0 +1,111 @@
+name: Release
+
+# Builds the APK and publishes it as a GitHub Release, so the README's download link always points
+# at the newest build. Two ways to start it:
+#   - push a tag:  git tag v0.9.9 && git push origin v0.9.9
+#   - or Actions -> Release -> Run workflow, with the tag to create (it is made on the branch you pick).
+# The tag must match versionName in app/build.gradle.kts.
+#
+# Signing: with the four repository secrets below the release APK is built (R8-shrunk) and signed
+# with your key. Without them the debug APK is published instead: it installs and runs the same,
+# but its signing key changes with every build, so moving to a newer one means uninstalling first.
+#   SILVERPOINT_KEYSTORE_BASE64     base64 of the .jks file (base64 -w0 upload.jks)
+#   SILVERPOINT_KEYSTORE_PASSWORD   SILVERPOINT_KEY_ALIAS   SILVERPOINT_KEY_PASSWORD
+# See docs/RELEASING.md.
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to create and release, e.g. v0.9.9 (must match versionName)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Build and publish the APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check the tag matches the app's version
+        run: |
+          version=$(sed -n 's/^ *versionName = "\(.*\)"/\1/p' app/build.gradle.kts)
+          echo "versionName $version, tag $TAG"
+          test "$TAG" = "v$version" || { echo "::error::Tag $TAG does not match versionName $version"; exit 1; }
+          if gh release view "$TAG" > /dev/null 2>&1; then echo "::error::Release $TAG already exists"; exit 1; fi
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v6
+
+      - name: Install SDK packages
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;36.0.0"
+
+      - name: Build the APK (signed release if the key is configured, otherwise debug)
+        env:
+          KEYSTORE_BASE64: ${{ secrets.SILVERPOINT_KEYSTORE_BASE64 }}
+          SILVERPOINT_KEYSTORE_PASSWORD: ${{ secrets.SILVERPOINT_KEYSTORE_PASSWORD }}
+          SILVERPOINT_KEY_ALIAS: ${{ secrets.SILVERPOINT_KEY_ALIAS }}
+          SILVERPOINT_KEY_PASSWORD: ${{ secrets.SILVERPOINT_KEY_PASSWORD }}
+        run: |
+          mkdir -p dist
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+            export SILVERPOINT_KEYSTORE="$RUNNER_TEMP/upload.jks"
+            ./gradlew testDebugUnitTest assembleRelease
+            cp app/build/outputs/apk/release/app-release.apk dist/Silverpoint.apk
+            echo "KIND=release" >> "$GITHUB_ENV"
+          else
+            echo "::warning::No signing key configured: publishing the debug APK (see docs/RELEASING.md)"
+            ./gradlew testDebugUnitTest assembleDebug
+            cp app/build/outputs/apk/debug/app-debug.apk dist/Silverpoint.apk
+            echo "KIND=debug" >> "$GITHUB_ENV"
+          fi
+          rm -f "$RUNNER_TEMP/upload.jks"
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs dist/Silverpoint.apk | head -3
+          (cd dist && sha256sum Silverpoint.apk > Silverpoint.apk.sha256)
+          ls -l dist
+
+      - name: Write the release notes
+        run: |
+          # this version's section of CHANGELOG.md, then how to install
+          awk -v v="$VERSION" '$0 ~ "^## \\[" v "\\]" {on=1; next} on && /^## \[/ {exit} on' CHANGELOG.md > notes.md
+          {
+            echo
+            echo "## Install"
+            echo
+            echo "1. Download **Silverpoint.apk** below on the phone (Galaxy S25 Ultra, Android 14 or newer)."
+            echo "2. Open it and allow installs from your browser or file manager when Android asks."
+            echo
+            echo "SHA-256: \`$(cut -d' ' -f1 dist/Silverpoint.apk.sha256)\`"
+            if [ "$KIND" = debug ]; then
+              echo
+              echo "This is a debug build: each build is signed with a different key, so to install a newer one, uninstall the old one first (your photos stay in the Gallery)."
+            fi
+          } >> notes.md
+          cat notes.md
+
+      - name: Publish the release
+        run: |
+          gh release create "$TAG" dist/Silverpoint.apk dist/Silverpoint.apk.sha256 \
+            --target "$GITHUB_SHA" --title "Silverpoint $VERSION" --notes-file notes.md --latest

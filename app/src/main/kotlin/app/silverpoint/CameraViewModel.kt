@@ -3,6 +3,7 @@ package app.silverpoint
 import android.app.Application
 import android.graphics.Bitmap
 import android.hardware.camera2.CameraManager
+import android.hardware.camera2.CameraMetadata
 import android.hardware.camera2.CaptureResult
 import android.media.MediaActionSound
 import android.net.Uri
@@ -16,7 +17,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import android.hardware.camera2.CameraMetadata
 import app.silverpoint.camera.CameraController
 import app.silverpoint.camera.Controls
 import app.silverpoint.camera.ExposureMath
@@ -208,7 +208,7 @@ class CameraViewModel(app: Application) : AndroidViewModel(app) {
         }
         // Warm the look tables for the selected recipe, then make the still look thumbnails.
         recipe?.let { r -> viewModelScope.launch(lookThread) { developer.look(r); previewLook(r) } }
-        // Off the look thread, so the viewfinder's own look is never queued behind 26 thumbnail tables.
+        // Off the look thread, so the viewfinder's own look is never queued behind every look's thumbnail table.
         viewModelScope.launch(Dispatchers.Default) { makeSampleThumbs() }
     }
 
@@ -233,7 +233,6 @@ class CameraViewModel(app: Application) : AndroidViewModel(app) {
             }.onFailure { message = "No usable RAW camera: ${it.message}" }
         }
     }
-
 
     /** The viewfinder surface, its buffer size and whether it was set up for the GL preview. */
     fun onSurface(s: Surface?, width: Int = 0, height: Int = 0, forGl: Boolean = false) {
@@ -343,14 +342,9 @@ class CameraViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Tap on the viewfinder: focus and meter there (unless focus is manual). */
     fun focusAt(u: Float, v: Float) {
-        if (settings.proMode && manualFocus != null) {
-            focusPoint = u to v
-            pushControls()
-            return
-        }
         focusPoint = u to v
         pushControls()
-        if (lens?.hasAutofocus == true) controller.focusAt(u, v)
+        if (!(settings.proMode && manualFocus != null) && lens?.hasAutofocus == true) controller.focusAt(u, v)
     }
 
     /** Double tap: back to continuous autofocus and whole-frame metering. */
@@ -503,7 +497,7 @@ class CameraViewModel(app: Application) : AndroidViewModel(app) {
         } else null
         val playSound = settings.shutterSound
         val flash = l.hasFlash && settings.flash != FlashMode.Off
-        val fullManual = settings.proMode && manualIso != null && manualShutterNs != null
+        val isFullManual = fullManual
         val aspect = settings.aspect.ratio
         // ATOMIC: once begin() has counted this photo, the block runs even if the screen goes away
         // first, so it always ends in submit() or abandon().
@@ -513,7 +507,7 @@ class CameraViewModel(app: Application) : AndroidViewModel(app) {
                 // auto-exposure with the pre-flash unless ISO and shutter are both set by hand.
                 val fire = flash && runCatching { controller.prepareFlash() }.getOrDefault(false)
                 val n = if (fire) 1 else frames
-                val e = if (fire) exposure.takeIf { fullManual } else shotExposure
+                val e = if (fire) exposure.takeIf { isFullManual } else shotExposure
                 if (n == 1) listOf(controller.capture(e, fireFlash = fire)) else controller.captureBurst(n, e)
             } catch (t: Throwable) {
                 developer.abandon()

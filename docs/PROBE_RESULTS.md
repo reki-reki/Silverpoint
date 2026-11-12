@@ -1,6 +1,6 @@
 # Probe results
 
-Results of the Silverpoint capability probe on real phones. The raw reports live in [`docs/reference/probe/`](reference/probe/). To add your phone, run the probe (see the [README](../README.md#run-the-probe)) and open a *Device report* issue.
+Results of the Silverpoint capability probe on real phones. The raw reports live in [`docs/reference/probe/`](reference/probe/). To add your phone, run the probe (see the [README](../README.md#diagnostics)) and open a *Device report* issue.
 
 ## Galaxy S25 Ultra (SM-S938B)
 

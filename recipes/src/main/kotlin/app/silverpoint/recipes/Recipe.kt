@@ -9,8 +9,6 @@ data class Recipe(
     val file: String,
     val set: String,
     val group: String,
-    val baseSim: String,
-    val reference: String,
     val look: String,
     val bestFor: String,
     val params: RecipeParams,
