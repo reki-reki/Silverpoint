@@ -48,7 +48,20 @@ Then:
 
 - **Version numbers:** `versionName` follows [Semantic Versioning](https://semver.org/), and `versionCode` goes up by one with every build you publish. Both are in `app/build.gradle.kts`.
 - **Changelog:** move the `[Unreleased]` items in [CHANGELOG.md](../CHANGELOG.md) under the new version with the date.
-- **Tag and release:** tag `vX.Y.Z` and attach the signed APK to a GitHub Release.
+- **Tag and release:** push the tag `vX.Y.Z` (it must match `versionName`), or run **Actions → Release → Run workflow** with the tag. The [Release workflow](../.github/workflows/release.yml) runs the unit tests, builds the APK, and publishes a GitHub Release with `Silverpoint.apk`, its SHA-256 and this version's CHANGELOG section. The README's download link (`releases/latest/download/Silverpoint.apk`) then points at it.
+
+## Signing releases in CI
+
+The Release workflow signs with your key when these repository secrets exist (**Settings → Secrets and variables → Actions**):
+
+| Secret | Value |
+|---|---|
+| `SILVERPOINT_KEYSTORE_BASE64` | the keystore file as base64: `base64 -w0 upload.jks` (macOS: `base64 -i upload.jks`) |
+| `SILVERPOINT_KEYSTORE_PASSWORD` | keystore password |
+| `SILVERPOINT_KEY_ALIAS` | key alias |
+| `SILVERPOINT_KEY_PASSWORD` | key password |
+
+With them it publishes the R8-shrunk release APK (about 3 MB). Without them it publishes the debug APK (about 31 MB). That build installs and runs the same, but each CI build signs it with a new debug key, so a newer one only installs after the old one is uninstalled. Install a signed release APK and run Diagnostics once before relying on it (see "Release build on the phone" above).
 
 ## Store listing checklist (Google Play)
 
