@@ -6,13 +6,13 @@
 ![Status: beta](https://img.shields.io/badge/status-beta-yellow.svg)
 [![Download APK](https://img.shields.io/github/v/release/reki-reki/Silverpoint?label=download%20APK&color=ff7a45)](https://github.com/reki-reki/Silverpoint/releases/latest/download/Silverpoint.apk)
 
-**A RAW camera for the Samsung Galaxy S25 Ultra that skips Samsung's image processing and develops every photo with a film-style look.**
+**A RAW camera app for Android, made for the Samsung Galaxy S25 Ultra: it skips Samsung's image processing and develops every photo with a film-style look.**
 
 Silverpoint captures a RAW frame through Android's Camera2 API, develops it on the GPU with its own pipeline, applies one of 21 film-inspired looks, and saves the finished JPEG straight to your Gallery.
 
 <p align="center"><img src="docs/brand/icon.png" width="112" alt="Silverpoint icon"></p>
 
-<p align="center"><a href="https://github.com/reki-reki/Silverpoint/releases/latest/download/Silverpoint.apk"><b>Download Silverpoint.apk</b></a> · <a href="https://github.com/reki-reki/Silverpoint/releases">all releases</a> · <a href="#install">how to install</a></p>
+<p align="center"><a href="https://github.com/reki-reki/Silverpoint/releases/latest/download/Silverpoint.apk"><b>Download Silverpoint.apk</b></a> · <a href="https://github.com/reki-reki/Silverpoint/releases">all releases</a> · <a href="#install">how to install</a> · <a href="https://reki-reki.github.io/Silverpoint/">website</a></p>
 
 <p align="center">
   <img src="docs/screenshots/camera_photo.jpg" width="23%" alt="Camera in Photo mode">

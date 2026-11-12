@@ -1,0 +1,46 @@
+name: Website
+
+# Publishes site/ (the project page at https://reki-reki.github.io/Silverpoint/) with GitHub Pages.
+# One-time setup: Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", "docs/brand/**", "docs/screenshots/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and deploy the website
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Assemble the site (the page plus the icon, social preview and screenshots from docs/)
+        run: |
+          mkdir -p _site/screenshots
+          cp site/* _site/
+          cp docs/brand/icon.png docs/brand/social-preview.png _site/
+          cp docs/screenshots/camera_photo.jpg docs/screenshots/looks_all.jpg docs/screenshots/camera_pro_shutter.jpg docs/screenshots/top_aspect.jpg _site/screenshots/
+          ls -R _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
